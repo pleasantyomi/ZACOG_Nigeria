@@ -55,15 +55,15 @@
             </div> -->
 
             <div class="flex justify-between items-center lg:px-7 px-5 lg:py-4 py-2 lg:full ml-auto mr-auto bg-white lg:bg-transparent">
-                <div class="lg:hidden grid h-8">
+                <div class="lg:hidden grid h-6 cursor-pointer" onclick="hamburger()">
                     <div class="bg-gray-900 h-[2px] w-5"></div>
                     <div class="bg-gray-900 h-[2px] w-5"></div>
                     <div class="bg-gray-900 h-[2px] w-5"></div>
                 </div>
 
                 <!-- mobile view hamburger items -->
-                <div class="hidden absolute bg-white w-full md:w-1/2 h-screen lg:hidden left-0 top-0">
-                    <div>
+                <div id="hamburger-contents" class="hidden absolute bg-white w-full md:w-1/2 h-screen lg:hidden left-0 top-0 z-10">
+                    <div onclick="hamburgerClose()" class="cursor-pointer">
                         <svg class="h-6 w-auto mr-5 mt-4 float-right" width="26" height="26" xmlns="http://www.w3.org/2000/svg"><path d="M23.607.98l1.414 1.413L14.414 13l10.607 10.607-1.414 1.414L13 14.414 2.393 25.021.98 23.607 11.586 13 .98 2.393 2.393.98 13 11.586 23.607.98z" fill="rgb(32, 33, 36)" fill-rule="evenodd"/></svg>
                     </div>
 
@@ -104,7 +104,7 @@
                     <a href="#" class="mr-5 px-1 hover:border-b border-b-red-600 flex items-center gap-1"><span>BLOG</span></a>
                     <a href="#" class="mr-5 px-1 hover:border-b border-b-red-600 flex items-center gap-1"><span>MEDIA RESOURCES</span></a>
                     <a href="contact.html" class="mr-5 px-1 hover:border-b border-b-red-600">CONTACT US</a>
-                    <a href="#" class="bg-red-600 py-2 px-4 rounded-lg text-white">ONLINE GIVING</a>
+                    <a href="#" class="bg-red-600 py-2 px-4 rounded-lg text-white" onclick="myAlert()">ONLINE GIVING</a>
                 </div>
 
                 <div class="lg:hidden">
@@ -223,5 +223,7 @@
         </div>
 
     </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>

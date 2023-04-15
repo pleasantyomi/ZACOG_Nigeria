@@ -55,15 +55,15 @@
             </div>
 
             <div class="flex justify-between items-center lg:px-7 px-5 lg:py-4 py-2 lg:w-11/12 ml-auto mr-auto bg-white lg:rounded-xl lg:shadow-md">
-                <div class="lg:hidden h-6 grid cursor-pointer" onclick="myfunction3()">
+                <div class="lg:hidden h-6 grid cursor-pointer" onclick="hamburger()">
                     <div class="bg-gray-900 h-[2px] w-5"></div>
                     <div class="bg-gray-900 h-[2px] w-5"></div>
                     <div class="bg-gray-900 h-[2px] w-5"></div>
                 </div>
 
                 <!-- mobile view hamburger items -->
-                <div class="hidden absolute bg-white w-full md:w-1/2 h-screen lg:hidden left-0 top-0">
-                    <div>
+                <div id="hamburger-contents" class="hidden absolute bg-white w-full md:w-1/2 h-screen lg:hidden left-0 top-0 z-10">
+                    <div onclick="hamburgerClose()">
                         <svg class="h-6 w-auto mr-5 mt-4 float-right" width="26" height="26" xmlns="http://www.w3.org/2000/svg"><path d="M23.607.98l1.414 1.413L14.414 13l10.607 10.607-1.414 1.414L13 14.414 2.393 25.021.98 23.607 11.586 13 .98 2.393 2.393.98 13 11.586 23.607.98z" fill="rgb(32, 33, 36)" fill-rule="evenodd"/></svg>
                     </div>
 
@@ -119,7 +119,7 @@
                     <a href="#" class="mr-5 px-1 hover:border-b border-b-red-600 flex items-center gap-1"><span>BLOG</span></a>
                     <a href="#" class="mr-5 px-1 hover:border-b border-b-red-600 flex items-center gap-1"><span>MEDIA RESOURCES</span></a>
                     <a href="contact.html" class="mr-5 px-1 hover:border-b border-b-red-600">CONTACT US</a>
-                    <a href="#" class="bg-red-600 py-2 px-4 rounded-lg text-white">ONLINE GIVING</a>
+                    <a href="#" class="bg-red-600 py-2 px-4 rounded-lg text-white" onclick="myAlert()">ONLINE GIVING</a>
                 </div>
 
                 <div class="lg:hidden">
@@ -132,7 +132,7 @@
             <h1 class="block font-semibold lg:text-xl text-lg text-center text-red-600 tracking-widest">WELCOME TO</h1>
             <h1 class="grid font-semibold text-center text-white lg:text-6xl text-3xl lg:leading-[70px] mb-2"><span>Zion Assembly Church Of God</span><span>Nigeria.</span> </h1>
             <p class="text-white font-normal lg:text-base text-sm text-center lg:w-8/12 w-10/12 ml-auto mr-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ratione expedita in ipsum ducimus consectetur reprehenderit omnis sed iusto tenetur similique, quos dolores velit reiciendis placeat porro voluptates, aperiam odio.</p>
-            <a href="#" class="block bg-red-600 text-white font-semibold lg:text-lg text-base text-center py-1 w-fit lg:px-5 px-3 rounded-lg ml-auto mr-auto mt-2">Learn more</a>
+            <a href="about.html" class="block bg-red-600 text-white font-semibold lg:text-lg text-base text-center py-1 w-fit lg:px-5 px-3 rounded-lg ml-auto mr-auto mt-2">Learn more</a>
         </div>
     </header>
 
@@ -365,5 +365,7 @@
         </div>
 
     </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
