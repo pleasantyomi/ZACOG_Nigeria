@@ -1,5 +1,14 @@
-function toggleAccordion(event) {
-  const header = event.target;
-  const body = header.nextElementSibling;
-  body.style.display = body.style.display === 'none' ? 'block' : 'none';
+let timeoutId;
+
+function showDropdown() {
+  const dropdown = document.querySelector('#dropdown-menu');
+  dropdown.classList.add('show');
+  clearTimeout(timeoutId);
+}
+
+function hideDropdown() {
+  timeoutId = setTimeout(() => {
+    const dropdown = document.querySelector('#dropdown-menu');
+    dropdown.classList.remove('show');
+  }, 500);
 }

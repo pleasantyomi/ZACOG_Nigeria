@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'bg1': "url('assets/Bg1.png')",
+        'bg1': "url('assets/Bg1.1.jpg')",
         'bg2': "url('assets/Bg2.png')",
         'bg3': "url('assets/IMG_9386.jpeg')",
         'bg4': "url('assets/dancing-concert-while-singer-is-performing-surrounded-with-lights.jpg')",
