@@ -10,14 +10,14 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'bg1': "url('assets/Bg1.1.jpg')",
+        'bg1': "url('assets/Background.webp')",
         'bg2': "url('assets/Bg2.png')",
         'bg3': "url('assets/IMG_9386.jpeg')",
-        'bg4': "url('assets/dancing-concert-while-singer-is-performing-surrounded-with-lights.jpg')",
-        'bg5': "url('assets/cross.jpg')",
-        'bg6': "url('assets/dove.jpg')",
-        'bg7': "url('assets/pray.jpg')",
-        'bg8': "url('assets/IMG_9475.JPG')",
+        'bg4': "url('assets/worship.webp')",
+        'bg5': "url('assets/cross.webp')",
+        'bg6': "url('assets/dove.webp')",
+        'bg7': "url('assets/pray.webp')",
+        'bg8': "url('assets/bishop.webp')",
 
 
       }
