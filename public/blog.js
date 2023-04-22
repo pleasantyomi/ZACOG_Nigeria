@@ -35,6 +35,66 @@
 
 function myfunction() {
     var x=
+    document.getElementById("hidden");
+    if (x.style.display === "none") {
+        x.style.display= "block";
+    } else {
+        x.style.display= "none";
+    }
+}   
+
+function myfunction1() {
+    var x=
+    document.getElementById("hidden1");
+    if (x.style.display === "none") {
+        x.style.display= "block";
+    } else {
+        x.style.display= "none";
+    }
+}   
+
+function myfunction2() {
+    var x=
+    document.getElementById("hidden2");
+    if (x.style.display === "none") {
+        x.style.display= "block";
+    } else {
+        x.style.display= "none";
+    }
+}   
+
+function myfunction3() {
+    var x=
+    document.getElementById("hidden3");
+    if (x.style.display === "none") {
+        x.style.display= "block";
+    } else {
+        x.style.display= "none";
+    }
+}   
+
+function myfunction4() {
+    var x=
+    document.getElementById("hidden4");
+    if (x.style.display === "none") {
+        x.style.display= "block";
+    } else {
+        x.style.display= "none";
+    }
+}   
+
+function myfunction5() {
+    var x=
+    document.getElementById("hidden5");
+    if (x.style.display === "none") {
+        x.style.display= "block";
+    } else {
+        x.style.display= "none";
+    }
+}   
+
+function close() {
+    var x=
     document.getElementById("hidden1");
     if (x.style.display === "none") {
         x.style.display= "block";

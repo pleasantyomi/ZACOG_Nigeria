@@ -123,7 +123,7 @@
         </div>
     </header>
 
-    <main class="my-10">
+    <main class="my-10 relative">
         <div class="w-11/12 ml-auto mr-auto">
             <div class="lg:flex justify-center">
                 <div class="relative bg-white shadow hover:shadow-black hover:transition-all hover:duration-150 lg:w-3/12 w-10/12 h-[70vh] rounded-lg p-4 overflow-hidden ml-auto mr-auto lg:ml-0 lg:mr-0 mb-10">
@@ -155,10 +155,15 @@
                             Shalom                         </p>    
                     </div>
         
-                    <a id="button-1" class="bg-gray-900 text-white font-semibold text-lg text-center py-2 absolute bottom-0 left-0 w-full" onclick="myfunction()">Continue reading...</a>
+                    <a id="button-1" class="bg-gray-900 text-white font-semibold text-lg text-center py-2 absolute bottom-0 left-0 w-full cursor-pointer" onclick="myfunction()">Continue reading...</a>
                 </div>
 
-                <div id="hidden1" class="hidden absolute w-11/12 h-auto px-8 bg-white shadow z-10">
+                <div id="hidden" class="hidden absolute top-0 w-11/12 h-auto px-8 bg-white shadow z-10">
+
+                    <div onclick="close()">
+                        <svg class="h-6 w-auto mr-5 mt-4 float-right"  width="26" height="26" xmlns="http://www.w3.org/2000/svg"><path d="M23.607.98l1.414 1.413L14.414 13l10.607 10.607-1.414 1.414L13 14.414 2.393 25.021.98 23.607 11.586 13 .98 2.393 2.393.98 13 11.586 23.607.98z" fill="rgb(32, 33, 36)" fill-rule="evenodd"/></svg>
+                    </div>
+
                     <p class="text-justify my-10">
                         <span class="font-semibold mb-1">Topic: Spiritual Growth<br>
                         Author: Evang. Adeyemi Adetayo<br></span>
@@ -214,11 +219,15 @@
                              *Ecclesiastes 12:1* says Remember now thy creator in the days of thy youth when the evil days come not and and the years draw near and thou shall say i have no pleasure in them. the glory of the youth is in their strength. use your strength as a youth to add to god's kingdom.                         </p>    
                     </div>
         
-                    <a href="#" class="bg-gray-900 text-white font-semibold text-lg text-center py-2 absolute bottom-0 left-0 w-full">Continue reading...</a>
+                    <a onclick="myfunction1()" class="bg-gray-900 text-white font-semibold text-lg text-center py-2 absolute bottom-0 left-0 w-full">Continue reading...</a>
                 </div>
 
-                <div class="hidden absolute w-11/12 h-fit px-8 py-10 bg-white shadow z-10">
-                    <p class="text-justify">
+                <div id="hidden1" class="hidden absolute w-11/12 h-fit px-8 py-10 bg-white shadow z-10">
+                    <div onclick="close()">
+                        <svg class="h-6 w-auto mr-5 mt-4 float-right"  width="26" height="26" xmlns="http://www.w3.org/2000/svg"><path d="M23.607.98l1.414 1.413L14.414 13l10.607 10.607-1.414 1.414L13 14.414 2.393 25.021.98 23.607 11.586 13 .98 2.393 2.393.98 13 11.586 23.607.98z" fill="rgb(32, 33, 36)" fill-rule="evenodd"/></svg>
+                    </div>
+
+                    <p class="text-justify my-10">
                         <span class="font-semibold mb-1">Topic: Five 'L' that cause deficiency of power and grace<br>
                         Author: Evang. Adeyemi Adetayo<br></span>
                         These are the things that has taken away power and grace and have not made you what God wants for you.
@@ -313,13 +322,13 @@
                             PLEASE COME BACK HOME                         </p>    
                     </div>
         
-                    <a href="#" class="bg-gray-900 text-white font-semibold text-lg text-center py-2 absolute bottom-0 left-0 w-full">Continue reading...</a>
+                    <a onclick="myfunction2()" class="bg-gray-900 text-white font-semibold text-lg text-center py-2 absolute bottom-0 left-0 w-full">Continue reading...</a>
         
                 </div>
             </div>
 
-            <div class="hidden absolute w-11/12 h-fit px-8 py-10 bg-white shadow z-10">
-                <p class="text-justify">
+            <div id="hidden2" class="hidden absolute w-11/12 h-fit px-8 py-10 bg-white shadow z-10">
+                <p class="text-justify my-10">
                     <span class="font-semibold mb-1">Topic: Holy spirit is crying - I have missed you<br>
                     Author: Evang. Adeyemi Adetayo<br></span>
                     Excuse me sir, you didn't start like this, what has happened to you?
@@ -467,11 +476,11 @@
                             God is a father who loves                         </p>    
                     </div>
         
-                    <a href="#" class="bg-gray-900 text-white font-semibold text-lg text-center py-2 absolute bottom-0 left-0 w-full">Continue reading...</a>
+                    <a onclick="myfunction3()" class="bg-gray-900 text-white font-semibold text-lg text-center py-2 absolute bottom-0 left-0 w-full">Continue reading...</a>
         
                 </div>
 
-                <div class="hidden absolute w-11/12 h-fit px-8 py-10 bg-white shadow z-10">
+                <div id="hidden3" class="hidden absolute w-11/12 h-fit px-8 py-10 bg-white shadow z-10">
                     <p class="text-justify">
                         <span class="font-semibold mb-1">Topic: What if?<br>
                         Author: Evang. Adeyemi Adetayo<br></span>
@@ -625,11 +634,11 @@
         <div>
             
         </div>
-                    <a href="#" class="bg-gray-900 text-white font-semibold text-lg text-center py-2 absolute bottom-0 left-0 w-full">Continue reading...</a>
+                    <a onclick="myfunction4()" class="bg-gray-900 text-white font-semibold text-lg text-center py-2 absolute bottom-0 left-0 w-full">Continue reading...</a>
         
                 </div>
 
-                <div class="hidden absolute w-11/12 h-fit px-8 py-10 bg-white shadow z-10">
+                <div id="hidden4" class="hidden absolute w-11/12 h-fit px-8 py-10 bg-white shadow z-10">
                     <p class="text-justify">
                         <span class="font-semibold mb-1">Topic: 7 Habits Of a Strong Christian<br>
                         Author: Evang. Adeyemi Adetayo<br></span>
@@ -771,11 +780,11 @@
                             Good health is impossible without good nutrition, and for good nutrition-you need a healthy balanced diet. You may need to consider your intake of salt, fats and sugar, and you should watch your portion sizes                         </p>    
                     </div>
         
-                    <a href="#" id="button6" class="bg-gray-900 text-white font-semibold text-lg text-center py-2 absolute bottom-0 left-0 w-full">Continue reading...</a>
+                    <a onclick="myfunction5()" id="button6" class="bg-gray-900 text-white font-semibold text-lg text-center py-2 absolute bottom-0 left-0 w-full">Continue reading...</a>
         
                 </div>
 
-                <div class="hidden absolute w-11/12 h-fit px-8 py-10 bg-white shadow z-10">
+                <div id="hidden5" class="hidden absolute w-11/12 h-fit px-8 py-10 bg-white shadow z-10">
                     <p class="text-justify">
                         <span class="font-semibold mb-1">Topic: Raising Compliant and Defiant Children<br>
                         Author: Evang. Adeyemi Adetayo<br></span>
