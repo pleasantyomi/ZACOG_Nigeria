@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZACOG_NIGERIA</title>
+    <link href="assets/Logo.png" rel="icon">
+    <link rel="stylesheet" href="styles.css">
+    <script src="dropdown.js"></script>
+    <script src="accordion.js"></script>
+    <script src="blog.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <header class="bg-bg1 bg-gray-900 bg-opacity-90 bg-blend-darken  h-[50vh] w-full bg-cover bg-no-repeat bg-center overflow-hidden">
+        <nav>
+            <div class="flex justify-between items-center lg:px-7 px-5 lg:py-4 py-2 lg:w-full ml-auto mr-auto lg:bg-transparent bg-white">
+                <div class="lg:hidden h-6 grid cursor-pointer" onclick="hamburger()">
+                    <div class="bg-gray-900 h-[2px] w-5"></div>
+                    <div class="bg-gray-900 h-[2px] w-5"></div>
+                    <div class="bg-gray-900 h-[2px] w-5"></div>
+                </div>
+
+                <!-- mobile view hamburger items -->
+                <div id="hamburger-contents" class="hidden absolute bg-white w-full md:w-1/2 h-screen lg:hidden left-0 top-0 z-10">
+                    <div onclick="hamburgerClose()">
+                        <svg class="h-6 w-auto mr-5 mt-4 float-right" width="26" height="26" xmlns="http://www.w3.org/2000/svg"><path d="M23.607.98l1.414 1.413L14.414 13l10.607 10.607-1.414 1.414L13 14.414 2.393 25.021.98 23.607 11.586 13 .98 2.393 2.393.98 13 11.586 23.607.98z" fill="rgb(32, 33, 36)" fill-rule="evenodd"/></svg>
+                    </div>
+
+                    <div class="mt-6 mb-10">
+                        <a href="index.html">
+                            <img class="h-12 w-auto ml-auto mr-auto" src="assets/Logo.png">
+                        </a>
+                    </div>
+
+
+                    <div class="font-semibold text-base text-gray-900">
+                        <a href="index.html" class="px-6 mb-5 flex justify-between items-center gap-1"><span>HOME</span><span class="font-normal text-red-600 text-2xl">+</span></a>                  
+                        <div id="accordion">
+                            <a id="accordion-header" onclick="toggleAccordion(1)" class="px-6 mb-5 flex justify-between items-center gap-1 cursor-pointer"><span>WHO WE ARE</span><span class="font-normal text-red-600 text-2xl">+</span></a>
+                            <div class="absolute hidden z-10 bg-white py-1 px-6 w-full" id="panel">
+                                <a href="" class="block mb-1">Our History</a>
+                                <a class="block mb-1">Mission and Vision</a>
+                                <a class="block mb-1">Our Beliefs</a>
+                                <a class="block mb-1">Our Structure</a>
+                                <a href="staffs.html" class="block mb-1">staff</a>
+                            </div>
+                        </div>     
+                       
+                        <div id="accordion"> 
+                            <a id="accordion-header" onclick="toggleAccordion(2)"  class="px-6 mb-5 flex justify-between items-center gap-1 cursor-pointer"><span>WHAT WE DO</span><span class="font-normal text-red-600 text-2xl">+</span></a>
+                            <div class="hidden absolute z-10  bg-white py-1 px-6 w-full" id="panel">
+                                <a href="https://zionassemblychurchofgod.com/sunday-school/" class="block mb-1">Sunday School</a>
+                                <a class="block mb-1">Bible college</a>
+                                <a class="block mb-1">Zion Comprehensive College</a>
+                                <a class="block mb-1">Zion Heritage Nur/Pry Schoool</a>
+                                <a class="block mb-1">Orphanage Home</a>
+                                <a class="block mb-1">Zion Musical Studio</a>
+                            </div>
+                        </div>
+                        <a href="blog.html" class="px-6 mb-5 flex justify-between items-center gap-1"><span>BLOG</span><span class="font-normal text-red-600 text-2xl">+</span></a>
+                        <a href="#" class="mb-5  flex items-center gap-1 px-6"><span>MEDIA RESOURCES</span></a>
+                        <a href="contact.html" class="px-6 ">CONTACT US</a>
+                        <!-- <a href="#" class="">ONLINE GIVING</a> -->
+                    </div>
+
+                    <div class="relative flex h-10 w-11/12 mr-auto ml-auto outline outline-[1px] outline-gray-400 mt-10 rounded-lg class=overflow-hidden flex-shrink-0 flex-nowrap">
+                        <input type="text" class="relative w-11/12 px-5 rounded-md text-lg text-gray-400 py-3 outline-none" placeholder="Search for.." >
+                        <svg class="w-10 h-full bg-red-600 absolute right-0 bottom-0 px-2 rounded-r-lg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="30px" height="30px" fill-rule="nonzero"><g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M13,3c-5.511,0 -10,4.489 -10,10c0,5.511 4.489,10 10,10c2.39651,0 4.59738,-0.85101 6.32227,-2.26367l5.9707,5.9707c0.25082,0.26124 0.62327,0.36648 0.97371,0.27512c0.35044,-0.09136 0.62411,-0.36503 0.71547,-0.71547c0.09136,-0.35044 -0.01388,-0.72289 -0.27512,-0.97371l-5.9707,-5.9707c1.41266,-1.72488 2.26367,-3.92576 2.26367,-6.32227c0,-5.511 -4.489,-10 -10,-10zM13,5c4.43012,0 8,3.56988 8,8c0,4.43012 -3.56988,8 -8,8c-4.43012,0 -8,-3.56988 -8,-8c0,-4.43012 3.56988,-8 8,-8z"></path></g></g></svg>
+                    </div>
+                </div>
+
+                <div>
+                    <a href="index.html" class="w-fit">
+                        <img class="h-12 w-auto ml-auto mr-auto" src="assets/Logo.png">
+                        <!-- <span class="font-semibold">ZACOG Nigeria</span> -->
+                    </a> 
+                </div>
+
+                <div class="hidden lg:flex items-center font-semibold text-base text-gray-900 lg:text-white">
+                    <a href="index.html" class="mr-5 px-1 hover:border-b border-b-red-600 flex items-center gap-1"><span>HOME</span></a>                       
+                    <div id="dropdown">
+                        <a href="about.html" class="mr-5 px-1 hover:border-b overflow-hidden pb-4 border-b-red-600 flex items-center gap-1" onmouseover="toggleDropdown(1)"><span>WHO WE ARE</span></a>
+                        <div class="absolute z-10 hidden bg-white py-5 px-3 w-2/12 font-normal text-sm text-gray-900 top-34 ml-16 hover:block" id="dropdown-menu">
+                            <a href="about.html#History" class="block mb-1 hover:bg-red-600 py-2 px-2 rounded-sm">Our History</a>
+                            <a href="about.html#missions" class="block mb-1 hover:bg-red-600 py-2 px-2 rounded-sm">Mission and Vision</a>
+                            <a href="about.html#beliefs" class="block mb-1 hover:bg-red-600 py-2 px-2 rounded-sm">Our Beliefs</a>
+                            <a href="about.html#structure" class="block mb-1 hover:bg-red-600 py-2 px-2 rounded-sm">Our Structure</a>
+                            <a href="staffs.html" class="block mb-1 hover:bg-red-600 py-2 px-2 rounded-sm">Staff</a>
+                        </div> 
+                    </div>           
+                    
+                    <div id="dropdown">
+                        <a id="dropdown-button" href="#" class="mr-5 px-1 hover:border-b border-b-red-600 flex items-center gap-1" onmouseover="toggleDropdown(2)"><span>WHAT WE DO</span></a>
+                        <div class="hidden z-10 absolute  bg-white py-5 px-3 w-2/12 font-normal text-sm text-gray-900 top-34 ml-16" id="dropdown-menu">
+                            <a href="https://zionassemblychurchofgod.com/sunday-school/" class="block mb-1 hover:bg-red-600 py-2 px-2 rounded-sm">Sunday School</a>
+                            <a class="block mb-1 hover:bg-red-600 py-2 px-2 rounded-sm">Bible college</a>
+                            <a class="block mb-1 hover:bg-red-600 py-2 px-2 rounded-sm">Zion Comprehensive College</a>
+                            <a class="block mb-1 hover:bg-red-600 py-2 px-2 rounded-sm">Zion Heritage Nur/Pry Schoool</a>
+                            <a class="block mb-1 hover:bg-red-600 py-2 px-2 rounded-sm">Orphanage Home</a>
+                            <a class="block mb-1 hover:bg-red-600 py-2 px-2 rounded-sm">Zion Musical Studio</a>
+                        </div>
+                    </div>
+        
+                    <a href="blog.html" class="mr-5 px-1 hover:border-b border-b-red-600 flex items-center gap-1"><span>BLOG</span></a>
+                    <a href="#" class="mr-5 px-1 hover:border-b border-b-red-600 flex items-center gap-1"><span>MEDIA RESOURCES</span></a>
+                    <a href="contact.html" class="mr-5 px-1 hover:border-b border-b-red-600">CONTACT US</a>
+                    <a href="#" class="bg-red-600 py-2 px-4 rounded-lg text-white" onclick="myAlert()">ONLINE GIVING</a>
+                </div>
+
+                <div class="lg:hidden">
+                    <svg class=" w-6 h-auto"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="30px" height="30px" fill-rule="nonzero"><g fill="rgb(32, 33, 36)" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M13,3c-5.511,0 -10,4.489 -10,10c0,5.511 4.489,10 10,10c2.39651,0 4.59738,-0.85101 6.32227,-2.26367l5.9707,5.9707c0.25082,0.26124 0.62327,0.36648 0.97371,0.27512c0.35044,-0.09136 0.62411,-0.36503 0.71547,-0.71547c0.09136,-0.35044 -0.01388,-0.72289 -0.27512,-0.97371l-5.9707,-5.9707c1.41266,-1.72488 2.26367,-3.92576 2.26367,-6.32227c0,-5.511 -4.489,-10 -10,-10zM13,5c4.43012,0 8,3.56988 8,8c0,4.43012 -3.56988,8 -8,8c-4.43012,0 -8,-3.56988 -8,-8c0,-4.43012 3.56988,-8 8,-8z"></path></g></g></svg>
+                </div>
+            </div>
+        </nav>
+
+        <div class="mt-36 lg:w-10/12 w-11/12 ml-auto mr-auto">
+            <h1 class="text-lg font-semibold text-white text-center">
+                <span>HOME - </span>
+                <span class="text-red-600">BLOGS</span>
+            </h1>
+        </div>
+    </header>
+
+    <main class="my-10">
+        <div class="w-11/12 ml-auto mr-auto">
+            <div class="lg:flex justify-center">
+                <div class="relative bg-white shadow hover:shadow-black hover:transition-all hover:duration-150 lg:w-3/12 w-10/12 h-[70vh] rounded-lg p-4 overflow-hidden ml-auto mr-auto lg:ml-0 lg:mr-0 mb-10">
+                    <div class="w-full h-[35vh] bg-bg5 bg-cover bg-no-repeat bg-gray-900 bg-opacity-50 bg-blend-darken rounded-md p-4">
+                    </div>
+        
+                    <div>
+                        <h1 class="grid font-semibold text-xl text-left leading-none mt-2">
+                            <span class="text-gray-900">Spiritual Growth</span>
+                            <span class="text-gray-900 font-extralight text-sm"> Evang. Adetayo Adeyemi</span>
+                        </h1>
+        
+                        <p class="mt-1 text-base font-normal text-gray-400 text-justify">
+                            Growth in its physical context connotes progressing from one state to another. As a believer, spiritual growth in its real sense is not just about how long you've lived being a Christian, how much you can fast, how melodious your voice sounds, how fervent you can blast in tongues, the number of years you've been a worker in God's vineyard, how gifted you are, etc.  The Criteria to measure your spiritual growth include:
+                            1. LOVE
+                            How your life as a believer is, is it worthy of emulation? The Bible says the greatest of all commandments is LOVE, "He that loveth not knoweth not God; for God is love." (1 John 4:8) and the Bible says in Genesis 1:27 that we are God's image, and the personality of God is Love which means we being a replica of God ought to love as well. In mathematics, if x=2 it means whenever we see x we use 2 in that case wherever we find a Christian we are to find Love.
+                            You say you love your neighbor but you keep doing what hurts your neighbor. Consider 1 John  4:20 if you can't express the Genuine love to the one you can see how much more the Invisible God.
+                            2. CHARACTER (A LIFE OF PEACE)
+                            The Bible says seek peace with all men and not those that love you alone. Jesus during His mission on Earth depicted the Act of Peace. If you have a bad character and you thought you're growing spiritually it's a big NO!
+                            Our God is Light, definitely our character depict who we are. Many Christians are full of pretentious attitude i.e. they are good to some, bad to others, nice to some, harsh to others etc. All these things end up in vanity. It's when you are able to depict God's character- Meekness, Joy, Endurance etc. (Galatians 5:22-23), then you can say you're growing spiritually.
+                            N.B.: There is something people call low self-esteem though it exists but in Christ it's non-existent. As a believer when you're being insulted and you remain silent, that doesn't make you a fool or even seeking peace with someone who hurt you doesn't mean you have a low self-esteem. We should all emulate Christ way of Life inspired in the persecution, hatred, spitting on His face etc. Though it is worth fighting the persecutor or even changing His mind for yet He said God should forgive for they know not what they are doing... (Luke 23:34) How many of you can do that if you were to be in His shoes? Certainly none. Food for thought: Anointing takes you up, bad character bring you down.
+                            3. UNDERSTANDING
+                            This is not about how intelligent you are or the number of certificate you possess but it is about how you understand God in some situation of your life. King David went through Hell yet He sees it as a reason to praise God. Many don't know that whenever we experience challenge it's a way of strengthening our spirit man. Rather they see it as a reason to blaspheme God and utter all sort of negative sayings. Human nature is the flesh in us, but the Apostle Paul says "We should be wise as MEN and be fool as hypocrites" . (1Corinthians 3:18; 10:15)
+                            We all tend to the nature of soberness and bitterness when it comes to experience in life but rather let's give thanks to God.
+                            4. OUTWORKING OF HIS POWER
+                            Possessing God's power is not the basis of Spiritual Growth but the dimension at which the  power is being made manifest in your life.
+                             With these criteria, examine yourself if you are really growing spiritually or not because the basis that will account hereafter is the spiritual basis not the physical/carnal basis.
+                            
+                            Shalom                         </p>    
+                    </div>
+        
+                    <a id="button-1" class="bg-gray-900 text-white font-semibold text-lg text-center py-2 absolute bottom-0 left-0 w-full" onclick="myfunction()">Continue reading...</a>
+                </div>
+
+                <div id="hidden1" class="hidden absolute w-11/12 h-auto px-8 bg-white shadow z-10">
+                    <p class="text-justify my-10">
+                        <span class="font-semibold mb-1">Topic: Spiritual Growth<br>
+                        Author: Evang. Adeyemi Adetayo<br></span>
+                        Growth in its physical context connotes progressing from one state to another. As a believer, spiritual growth in its real sense is not just about how long you've lived being a Christian, how much you can fast, how melodious your voice sounds, how fervent you can blast in tongues, the number of years you've been a worker in God's vineyard, how gifted you are, etc.  The Criteria to measure your spiritual growth include:
+                        1. LOVE
+                        How your life as a believer is, is it worthy of emulation? The Bible says the greatest of all commandments is LOVE, "He that loveth not knoweth not God; for God is love." (1 John 4:8) and the Bible says in Genesis 1:27 that we are God's image, and the personality of God is Love which means we being a replica of God ought to love as well. In mathematics, if x=2 it means whenever we see x we use 2 in that case wherever we find a Christian we are to find Love.
+                        You say you love your neighbor but you keep doing what hurts your neighbor. Consider 1 John  4:20 if you can't express the Genuine love to the one you can see how much more the Invisible God.
+                        2. CHARACTER (A LIFE OF PEACE)
+                        The Bible says seek peace with all men and not those that love you alone. Jesus during His mission on Earth depicted the Act of Peace. If you have a bad character and you thought you're growing spiritually it's a big NO!
+                        Our God is Light, definitely our character depict who we are. Many Christians are full of pretentious attitude i.e. they are good to some, bad to others, nice to some, harsh to others etc. All these things end up in vanity. It's when you are able to depict God's character- Meekness, Joy, Endurance etc. (Galatians 5:22-23), then you can say you're growing spiritually.
+                        N.B.: There is something people call low self-esteem though it exists but in Christ it's non-existent. As a believer when you're being insulted and you remain silent, that doesn't make you a fool or even seeking peace with someone who hurt you doesn't mean you have a low self-esteem. We should all emulate Christ way of Life inspired in the persecution, hatred, spitting on His face etc. Though it is worth fighting the persecutor or even changing His mind for yet He said God should forgive for they know not what they are doing... (Luke 23:34) How many of you can do that if you were to be in His shoes? Certainly none. Food for thought: Anointing takes you up, bad character bring you down.
+                        3. UNDERSTANDING
+                        This is not about how intelligent you are or the number of certificate you possess but it is about how you understand God in some situation of your life. King David went through Hell yet He sees it as a reason to praise God. Many don't know that whenever we experience challenge it's a way of strengthening our spirit man. Rather they see it as a reason to blaspheme God and utter all sort of negative sayings. Human nature is the flesh in us, but the Apostle Paul says "We should be wise as MEN and be fool as hypocrites" . (1Corinthians 3:18; 10:15)
+                        We all tend to the nature of soberness and bitterness when it comes to experience in life but rather let's give thanks to God.
+                        4. OUTWORKING OF HIS POWER
+                        Possessing God's power is not the basis of Spiritual Growth but the dimension at which the  power is being made manifest in your life.
+                         With these criteria, examine yourself if you are really growing spiritually or not because the basis that will account hereafter is the spiritual basis not the physical/carnal basis.
+                        
+                        Shalom       
+                    </p>
+                </div>
+        
+                <div class="relative bg-white shadow hover:shadow-black hover:transition-all hover:duration-150 lg:w-3/12 w-10/12 h-[70vh] rounded-lg p-4 overflow-hidden ml-auto mr-auto lg:ml-0 lg:mr-0 mb-10">
+                    <div class="w-full h-[35vh] bg-bg6 bg-cover bg-no-repeat bg-gray-900 bg-opacity-50 bg-blend-darken rounded-md p-4">
+                    </div>
+        
+                    <div>
+                        <h1 class="grid font-semibold text-xl text-left leading-none mt-2">
+                            <span class="text-gray-900">Five 'L' that cause deficiency of power and grace</span>
+                            <span class="text-gray-900 font-extralight text-sm"> Evang. Adetayo Adeyemi</span>
+                        </h1>
+        
+                        <p class="mt-1 text-base font-normal text-gray-400 text-justify">
+                            These are the things that has taken away power and grace and have not made you what God wants for you.
+                            (1) LAZINESS : A lazy man cannot succeed. Proverbs 6:6 tells us to learn from the ants. They have no one to supervise or tell them what to do. Ants are well organized. Poverty,failure comes from laziness. Proverbs 6:6-11. You love food yet you hate work.
+                            (2) LOOSENESS : No moral restraint. Indescent touching of the opposite sex. No restraint in the way you play. No restraint in the way you talk and relate with the opposite sex. Don't be loose with your mouth. It is not the nature of Christ to be loose. Looseness will drain you of every grace you carry. We are not ordinary. 1Peter 2:9. Christ in you makes you peculiar. There is grace to control every feeling you have. Looseness makes you display things you should be ashamed of displaying.
+                            (3) LIGHTNESS : They do not take anything serious. Lightness means lacking stability-changeable with ease. A light person doesn't know that the purpose of music isn't for entertainment but to bring down God's presence and enable people to have encounter with God. Anyone who worship God must worship in spirit and truth.
+                            (4) LOQUACIOUSNESS: It means talking too much. Someone who talks too much can drain all power gotten in place of prayer within a short time. Train yourself that every word of your mouth is scriptural. Proverbs 10:19. 
+                            (5) LIKE OTHERS: You cannot be like the majority, if you want to please God. 
+                            You must not follow the crowd. You should rebuke others when you see them doing the wrong things. Dare to be an overcomer and different. Be in the group of people that are spiritually minded.
+                               You have to acquire the knowledge of God and anointing now as a youth. 1Timothy4:12. A youth without Christ will be despised. A youth that portrait youthfulness will not be regarded as worthy. Philippians 4:13. You can do all things through Christ. There is grace in Christ to keep you. Out of many prophets who followed Baal there were still 7,000 prophets that didn't leave God. God will not change his standard because everyone is doing evil.
+                            
+                            
+                            THINGS THAT MAKE PEOPLE LOOK DOWN ON YOUTHS.
+                            (1) IMMATURITY: Acting in a childish way. A youth who saturates his mind will be respected and put in place of responsibility. The word of God makes you think, talk and behave wiser than your age. 1Corinthians 13:11, Job 32:6-9 Psalms 119:98-100. Don't look down on yourself because of your age. Begin to catch God's vision for your life. There is a reason for your existence. Grow up.
+                            (2) IMMORALITY :  Flee all youthful lust. Conform yourself to God's ways.2Timothy 2:22.
+                            (3) INDECENT APPEARANCE OR DRESSING:  As a Christian you should dress and comport yourself in a manner that will not expose sensitive parts of your body thereby causing others to stumble through lustful thoughts and temptations. 1Timothy 2:9,1Corinthians 8:9, Romans 14:21.
+                            (4)  INDEPENDENCE/ INSUBORDINATION. Youths believe they should be allowed to make their own decision. As people grow and mature they realize that no one knows all or has all that he needs, that we all need one another. This need for us to depend on one another is called interdependence. That means we can benefit from counsel or talent or grace of other people. 1 Corinthians 12:21-23
+                            (5) INSTABILITY/INCONSISTENCY: You need to overcome the youthful tendency to keep searching from one place to another for excitement and high and strange sounding teachings or spiritual manifestations. Ephesians 4:14.
+                            (6)  INDISCIPLINE: There is need for everyone to discipline his flesh with regards to sleep, television viewing, hand sets, internet browsing, food and drinks and sexual sins. 1corinthians 9:27, 1 John 2:13-14.
+                            
+                            Be strong in the Lord. Allow the Word of God to abide in you and you will easily overcome satan, the wicked one.
+                             *Ecclesiastes 12:1* says Remember now thy creator in the days of thy youth when the evil days come not and and the years draw near and thou shall say i have no pleasure in them. the glory of the youth is in their strength. use your strength as a youth to add to god's kingdom.                         </p>    
+                    </div>
+        
+                    <a href="#" class="bg-gray-900 text-white font-semibold text-lg text-center py-2 absolute bottom-0 left-0 w-full">Continue reading...</a>
+                </div>
+
+                <div class="hidden absolute w-11/12 h-fit px-8 py-10 bg-white shadow z-10">
+                    <p class="text-justify">
+                        <span class="font-semibold mb-1">Topic: Five 'L' that cause deficiency of power and grace<br>
+                        Author: Evang. Adeyemi Adetayo<br></span>
+                        These are the things that has taken away power and grace and have not made you what God wants for you.
+                        (1) LAZINESS : A lazy man cannot succeed. Proverbs 6:6 tells us to learn from the ants. They have no one to supervise or tell them what to do. Ants are well organized. Poverty,failure comes from laziness. Proverbs 6:6-11. You love food yet you hate work.
+                        (2) LOOSENESS : No moral restraint. Indescent touching of the opposite sex. No restraint in the way you play. No restraint in the way you talk and relate with the opposite sex. Don't be loose with your mouth. It is not the nature of Christ to be loose. Looseness will drain you of every grace you carry. We are not ordinary. 1Peter 2:9. Christ in you makes you peculiar. There is grace to control every feeling you have. Looseness makes you display things you should be ashamed of displaying.
+                        (3) LIGHTNESS : They do not take anything serious. Lightness means lacking stability-changeable with ease. A light person doesn't know that the purpose of music isn't for entertainment but to bring down God's presence and enable people to have encounter with God. Anyone who worship God must worship in spirit and truth.
+                        (4) LOQUACIOUSNESS: It means talking too much. Someone who talks too much can drain all power gotten in place of prayer within a short time. Train yourself that every word of your mouth is scriptural. Proverbs 10:19. 
+                        (5) LIKE OTHERS: You cannot be like the majority, if you want to please God. 
+                        You must not follow the crowd. You should rebuke others when you see them doing the wrong things. Dare to be an overcomer and different. Be in the group of people that are spiritually minded.
+                           You have to acquire the knowledge of God and anointing now as a youth. 1Timothy4:12. A youth without Christ will be despised. A youth that portrait youthfulness will not be regarded as worthy. Philippians 4:13. You can do all things through Christ. There is grace in Christ to keep you. Out of many prophets who followed Baal there were still 7,000 prophets that didn't leave God. God will not change his standard because everyone is doing evil.
+                        
+                        
+                        THINGS THAT MAKE PEOPLE LOOK DOWN ON YOUTHS.
+                        (1) IMMATURITY: Acting in a childish way. A youth who saturates his mind will be respected and put in place of responsibility. The word of God makes you think, talk and behave wiser than your age. 1Corinthians 13:11, Job 32:6-9 Psalms 119:98-100. Don't look down on yourself because of your age. Begin to catch God's vision for your life. There is a reason for your existence. Grow up.
+                        (2) IMMORALITY :  Flee all youthful lust. Conform yourself to God's ways.2Timothy 2:22.
+                        (3) INDECENT APPEARANCE OR DRESSING:  As a Christian you should dress and comport yourself in a manner that will not expose sensitive parts of your body thereby causing others to stumble through lustful thoughts and temptations. 1Timothy 2:9,1Corinthians 8:9, Romans 14:21.
+                        (4)  INDEPENDENCE/ INSUBORDINATION. Youths believe they should be allowed to make their own decision. As people grow and mature they realize that no one knows all or has all that he needs, that we all need one another. This need for us to depend on one another is called interdependence. That means we can benefit from counsel or talent or grace of other people. 1 Corinthians 12:21-23
+                        (5) INSTABILITY/INCONSISTENCY: You need to overcome the youthful tendency to keep searching from one place to another for excitement and high and strange sounding teachings or spiritual manifestations. Ephesians 4:14.
+                        (6)  INDISCIPLINE: There is need for everyone to discipline his flesh with regards to sleep, television viewing, hand sets, internet browsing, food and drinks and sexual sins. 1corinthians 9:27, 1 John 2:13-14.
+                        
+                        Be strong in the Lord. Allow the Word of God to abide in you and you will easily overcome satan, the wicked one.
+                         *Ecclesiastes 12:1* says Remember now thy creator in the days of thy youth when the evil days come not and and the years draw near and thou shall say i have no pleasure in them. the glory of the youth is in their strength. use your strength as a youth to add to god's kingdom.
+                    </p>
+                </div>
+        
+        
+                <div class="relative bg-white shadow hover:shadow-black hover:transition-all hover:duration-150 lg:w-3/12 w-10/12 h-[70vh] rounded-lg p-4 overflow-hidden ml-auto mr-auto lg:ml-0 lg:mr-0 mb-10">
+                    <div class="w-full h-[35vh] bg-bg7 bg-cover bg-no-repeat bg-gray-900 bg-opacity-50 bg-blend-darken rounded-md p-4">
+                    </div>
+        
+                    <div>
+                        <h1 class="grid font-semibold text-xl text-left leading-none mt-2">
+                            <span class="text-gray-900">Holy spirit is crying - I have missed you</span>
+                            <span class="text-gray-900 font-extralight text-sm"> Evang. Adetayo Adeyemi</span>
+                        </h1>
+        
+                        <p class="mt-1 text-base font-normal text-gray-400 text-justify">
+                            Excuse me sir, you didn't start like this, what has happened to you?
+                            Excuse me Ma, why is this happening?
+                            
+                            What has happened to your secret place? 
+                            Where is your hunger and burden?
+                            Where is your tears in the place of prayers?
+                            What happened to those nights of burdens, Labour, travail and tears?
+                            What happened to fasting?
+                            What happened to longing and desire for God, not ministry?
+                            What happened to evangelism?
+                            What happened to your night vigils?
+                            
+                            I remember before any ministration you will press and labour in word and prayers even with tears trusting God to be seen in that meeting.
+                            But today it seems like you have mastered God, you just go up casually,
+                            
+                            Today we can afford to go from our Facebook page and social  media platforms or jesting and straight up to the Alter to Minister on behalf of God to God,s People. 
+                            
+                            Sir, we didn't start like that, we had reverence for spiritual things.
+                            What happened  to you sir?
+                            Then, We don't care who gets the glory, it's all about God but what has happened to us sir?
+                            
+                            Then, we were eager to go to conferences to seek God's face, there was hunger all over your soul, ready to devour mysteries, the passion for the kingdom was so high, we were even scared if we would be able to exist or do without the Holy Ghost .What happened to your life then?
+                            
+                            Take time to remember those campus days, those nights at the campus court praying at the top of your voice all night, weeping like a baby just for more of God.
+                            
+                            What happened to you sir?
+                            
+                            We were eager for fellowship then, serving in God's house with all zeal and passion.
+                            Oh I remember how we loved the word and fellowship with  brethren.
+                            
+                            Could it be because nobody knew us then? 
+                            Could it be because nobody was calling us MOG then?
+                            Could it because we didn't  have social media followership then?
+                            
+                            Oh Man Of God, What happened to you sir? How come we have been reduced to nothing? No passion again?!
+                            
+                            If a pastor corrects us now we now get angry, lateness to church is normal now, then we can sow all for the Kingdom but now never. Oh Man Of God what happened to you?
+                            As you are reading this I know He is calling you again.
+                            
+                            I hear God saying Son
+                             I HAVE MISSED YOU 
+                            I HAVE MISSED OUR TIME TOGETHER 
+                            I HAVE MISSED OUR VIGILS AND BIBLES STUDY TIME 
+                            I HAVE MISSED THOSE DAYS WHEN NOBODY KNEW YOU. 
+                            I HAVE MISSED THOSE DAYS WHEN YOU ARE NOT EAGER TO ANSWER WATSAP MESSAGES AND POST BUT YOU WANT TO STAY WITH ME AS LONG AS POSSIBLE. 
+                            
+                            SIR/MA, MAY YOU NOT LOOSE YOUR WONDER. PLEASE GO BACK TO KOINONIA, THE HOLY GHOST HAS MISSED YOU.
+                            
+                            ACTIVITIES, SOCIAL MEDIA FOLLOWERSHIP IS NOT EQUAL TO HEARTILY CONNECTION WITH THE HOLY GHOST.
+                            
+                            PLEASE GO BACK TO THE SECRET PLACE
+                            CRY TO HIM, MAY I NOT LOOSE YOUR WONDER PLEASE LORD RESTORE ME.
+                            HE WANTS TO SEE YOUR TEARS LIKE THAT OF A BABY.
+                            HE WANTS TO HEAR THOSE SONGS THAT HAVE NO RHYTHM BUT COME FROM THE DEEPEST PART OF YOUR  HEART.
+                            PLEASE COME BACK HOME                         </p>    
+                    </div>
+        
+                    <a href="#" class="bg-gray-900 text-white font-semibold text-lg text-center py-2 absolute bottom-0 left-0 w-full">Continue reading...</a>
+        
+                </div>
+            </div>
+
+            <div class="hidden absolute w-11/12 h-fit px-8 py-10 bg-white shadow z-10">
+                <p class="text-justify">
+                    <span class="font-semibold mb-1">Topic: Holy spirit is crying - I have missed you<br>
+                    Author: Evang. Adeyemi Adetayo<br></span>
+                    Excuse me sir, you didn't start like this, what has happened to you?
+                    Excuse me Ma, why is this happening?
+                    
+                    What has happened to your secret place? 
+                    Where is your hunger and burden?
+                    Where is your tears in the place of prayers?
+                    What happened to those nights of burdens, Labour, travail and tears?
+                    What happened to fasting?
+                    What happened to longing and desire for God, not ministry?
+                    What happened to evangelism?
+                    What happened to your night vigils?
+                    
+                    I remember before any ministration you will press and labour in word and prayers even with tears trusting God to be seen in that meeting.
+                    But today it seems like you have mastered God, you just go up casually,
+                    
+                    Today we can afford to go from our Facebook page and social  media platforms or jesting and straight up to the Alter to Minister on behalf of God to God,s People. 
+                    
+                    Sir, we didn't start like that, we had reverence for spiritual things.
+                    What happened  to you sir?
+                    Then, We don't care who gets the glory, it's all about God but what has happened to us sir?
+                    
+                    Then, we were eager to go to conferences to seek God's face, there was hunger all over your soul, ready to devour mysteries, the passion for the kingdom was so high, we were even scared if we would be able to exist or do without the Holy Ghost .What happened to your life then?
+                    
+                    Take time to remember those campus days, those nights at the campus court praying at the top of your voice all night, weeping like a baby just for more of God.
+                    
+                    What happened to you sir?
+                    
+                    We were eager for fellowship then, serving in God's house with all zeal and passion.
+                    Oh I remember how we loved the word and fellowship with  brethren.
+                    
+                    Could it be because nobody knew us then? 
+                    Could it be because nobody was calling us MOG then?
+                    Could it because we didn't  have social media followership then?
+                    
+                    Oh Man Of God, What happened to you sir? How come we have been reduced to nothing? No passion again?!
+                    
+                    If a pastor corrects us now we now get angry, lateness to church is normal now, then we can sow all for the Kingdom but now never. Oh Man Of God what happened to you?
+                    As you are reading this I know He is calling you again.
+                    
+                    I hear God saying Son
+                     I HAVE MISSED YOU 
+                    I HAVE MISSED OUR TIME TOGETHER 
+                    I HAVE MISSED OUR VIGILS AND BIBLES STUDY TIME 
+                    I HAVE MISSED THOSE DAYS WHEN NOBODY KNEW YOU. 
+                    I HAVE MISSED THOSE DAYS WHEN YOU ARE NOT EAGER TO ANSWER WATSAP MESSAGES AND POST BUT YOU WANT TO STAY WITH ME AS LONG AS POSSIBLE. 
+                    
+                    SIR/MA, MAY YOU NOT LOOSE YOUR WONDER. PLEASE GO BACK TO KOINONIA, THE HOLY GHOST HAS MISSED YOU.
+                    
+                    ACTIVITIES, SOCIAL MEDIA FOLLOWERSHIP IS NOT EQUAL TO HEARTILY CONNECTION WITH THE HOLY GHOST.
+                    
+                    PLEASE GO BACK TO THE SECRET PLACE
+                    CRY TO HIM, MAY I NOT LOOSE YOUR WONDER PLEASE LORD RESTORE ME.
+                    HE WANTS TO SEE YOUR TEARS LIKE THAT OF A BABY.
+                    HE WANTS TO HEAR THOSE SONGS THAT HAVE NO RHYTHM BUT COME FROM THE DEEPEST PART OF YOUR  HEART.
+                    PLEASE COME BACK HOME  
+                </p>
+            </div>
+
+            <div class="lg:flex justify-center">
+                <div class="relative bg-white shadow hover:shadow-black hover:transition-all hover:duration-150 lg:w-3/12 w-10/12 h-[70vh] rounded-lg p-4 overflow-hidden ml-auto mr-auto lg:ml-0 lg:mr-0 mb-10">
+                    <div class="w-full h-[35vh] bg-bg5 bg-cover bg-no-repeat bg-gray-900 bg-opacity-50 bg-blend-darken rounded-md p-4">
+                    </div>
+        
+                    <div>
+                        <h1 class="grid font-semibold text-xl text-left leading-none mt-2">
+                            <span class="text-gray-900">What If?</span>
+                            <span class="text-gray-900 font-extralight text-sm"> Evang. Adetayo Adeyemi</span>
+                        </h1>
+        
+                        <p class="mt-1 text-base font-normal text-gray-400 text-justify">
+                            WHAT IF HE THOUGHT AS MAN DOES, DID?
+
+                            I tried to converse about He who sent me but was shy
+                            Kneeling in supplication is a necessity I find impossible
+                            I have duties to perform in the vineyard
+                            But truly time isn't a friend
+                            A minute or two with thanks would have been fair
+                            But it is usually a mind-numbing tradition
+                            I wish to help but how much can busy-me render?
+                            
+                            I’m just flesh, PLEASE UNDERSTAND;
+                            Understand my hands are tied
+                            Understand I’m the shy type
+                            Understand I have dire family responsibilities
+                            Understand life isn't easy, I have to earn
+                            Understand it could sound awkward
+                            Understand my friends will definitely taunt me
+                            Understand I cherish your holy book and day
+                            But friends get my eye red with wine
+                            
+                            Please Understand, IF ONLY:
+                            If only you made me a little taller and less timid
+                            If only you made me more vocal and more vibrant
+                            If only you Graced me with heaven-fat wealth
+                            If only you lightened my family responsibilities
+                            If only you made the sun rule the night 
+                            If only I had a labour-free life
+                            If only I am a master of miracles
+                            If only you made the seas red and the sky black
+                            Perhaps, I would have been an asset to you
+                            
+                            But then, WHAT IF?
+                            What if God was so self centered?
+                            What if He decides to be absent?
+                            What if he cared less about humanrace?
+                            What if He though as men does, did?
+                            What if he says:
+                            
+                            I tried to make my presence to he who sort me but was shy
+                            Listening to supplications is a neccesity I find impossible
+                            I have duties to perform in the life of people
+                            But truly, stress has been my friend
+                            Just an outstretched hand would have been fair
+                            Oh! Too bad, my hands are full
+                            I wish to help but how much can busy-me render?
+                            
+                            I’m a Supreme Being, PLEASE UNDERSTAND;
+                            Understand I have too many voices on my name
+                            Understand the birds, beasts and fishes all rely on me
+                            Understand the field crave my grace
+                            Understand I have to inhabit the praises of my Angels
+                            Understand the Devil wants me to flaw
+                            Understand my responsibility is to the entire Universe
+                            Understand I cherish your beautiful face
+                            But I wont hesitate to let it rot in Hell when you err
+                            
+                            Please understand, IF ONLY:
+                            If only you thanked me a little often
+                            If only your offerings were better than your nags
+                            If only you sacrificed a little time with me
+                            If only your heart and ears were unimpeded
+                            If only you made me rule your hours
+                            If only I had lesser responsibilities to harbour
+                            If only I was the master of your life
+                            If only you kept your lamp blazing with light
+                            Perhaps, I would have been an asset to you
+                            
+                            But then, GOD IS
+                            God is a father who provides
+                            God is a father who cares [Matt, 7:11]
+                            God is a father who gives [Jn, 3:16]
+                            God is a father who forgives
+                            God is a father who loves                         </p>    
+                    </div>
+        
+                    <a href="#" class="bg-gray-900 text-white font-semibold text-lg text-center py-2 absolute bottom-0 left-0 w-full">Continue reading...</a>
+        
+                </div>
+
+                <div class="hidden absolute w-11/12 h-fit px-8 py-10 bg-white shadow z-10">
+                    <p class="text-justify">
+                        <span class="font-semibold mb-1">Topic: What if?<br>
+                        Author: Evang. Adeyemi Adetayo<br></span>
+                        WHAT IF HE THOUGHT AS MAN DOES, DID?
+
+                        I tried to converse about He who sent me but was shy
+                        Kneeling in supplication is a necessity I find impossible
+                        I have duties to perform in the vineyard
+                        But truly time isn't a friend
+                        A minute or two with thanks would have been fair
+                        But it is usually a mind-numbing tradition
+                        I wish to help but how much can busy-me render?
+                        
+                        I’m just flesh, PLEASE UNDERSTAND;
+                        Understand my hands are tied
+                        Understand I’m the shy type
+                        Understand I have dire family responsibilities
+                        Understand life isn't easy, I have to earn
+                        Understand it could sound awkward
+                        Understand my friends will definitely taunt me
+                        Understand I cherish your holy book and day
+                        But friends get my eye red with wine
+                        
+                        Please Understand, IF ONLY:
+                        If only you made me a little taller and less timid
+                        If only you made me more vocal and more vibrant
+                        If only you Graced me with heaven-fat wealth
+                        If only you lightened my family responsibilities
+                        If only you made the sun rule the night 
+                        If only I had a labour-free life
+                        If only I am a master of miracles
+                        If only you made the seas red and the sky black
+                        Perhaps, I would have been an asset to you
+                        
+                        But then, WHAT IF?
+                        What if God was so self centered?
+                        What if He decides to be absent?
+                        What if he cared less about humanrace?
+                        What if He though as men does, did?
+                        What if he says:
+                        
+                        I tried to make my presence to he who sort me but was shy
+                        Listening to supplications is a neccesity I find impossible
+                        I have duties to perform in the life of people
+                        But truly, stress has been my friend
+                        Just an outstretched hand would have been fair
+                        Oh! Too bad, my hands are full
+                        I wish to help but how much can busy-me render?
+                        
+                        I’m a Supreme Being, PLEASE UNDERSTAND;
+                        Understand I have too many voices on my name
+                        Understand the birds, beasts and fishes all rely on me
+                        Understand the field crave my grace
+                        Understand I have to inhabit the praises of my Angels
+                        Understand the Devil wants me to flaw
+                        Understand my responsibility is to the entire Universe
+                        Understand I cherish your beautiful face
+                        But I wont hesitate to let it rot in Hell when you err
+                        
+                        Please understand, IF ONLY:
+                        If only you thanked me a little often
+                        If only your offerings were better than your nags
+                        If only you sacrificed a little time with me
+                        If only your heart and ears were unimpeded
+                        If only you made me rule your hours
+                        If only I had lesser responsibilities to harbour
+                        If only I was the master of your life
+                        If only you kept your lamp blazing with light
+                        Perhaps, I would have been an asset to you
+                        
+                        But then, GOD IS
+                        God is a father who provides
+                        God is a father who cares [Matt, 7:11]
+                        God is a father who gives [Jn, 3:16]
+                        God is a father who forgives
+                        God is a father who loves     
+                    </p>
+                </div>
+        
+                <div class="relative bg-white shadow hover:shadow-black hover:transition-all hover:duration-150 lg:w-3/12 w-10/12 h-[70vh] rounded-lg p-4 overflow-hidden ml-auto mr-auto lg:ml-0 lg:mr-0 mb-10">
+                    <div class="w-full h-[35vh] bg-bg6 bg-cover bg-no-repeat bg-gray-900 bg-opacity-50 bg-blend-darken rounded-md p-4">
+                    </div>
+        
+                    <div>
+                        <h1 class="grid font-semibold text-xl text-left leading-none mt-2">
+                            <span class="text-gray-900">7 Habits Of a Strong Christian</span>
+                            <span class="text-gray-900 font-extralight text-sm"> Evang. Adetayo Adeyemi</span>
+                        </h1>
+        
+                        <p class="mt-1 text-base font-normal text-gray-400 text-justify">
+                            If you want to grow in your Christian life pls read this article. It is very Inspiring and motivating .
+
+                            When you establish the 7 habits of strong Christians in your life, it will keep you strong, protect you from the enemy, and catapult you to victory.
+                            The secret to your future is hidden. It’s not hidden from you, though—it’s hidden for you. You see, your future is up to you. Whatever you have and whatever happens in your life isn’t an accident, or necessarily always God’s will—it is in your hands more than you may know.
+                            Where can you find this hidden secret? In your daily routine.
+                            ‎What you do on a daily basis will determine what you have in this life. If you’re sowing to your flesh, the results will never be what you want. But if you sow to the spirit, you will become stronger and stronger (Galatians 6:8). You will get to a place where you confidently stand your ground, resist the enemy, and receive more from God—no matter what comes your way.
+                            You have a decision to make. Is victory important to you?
+                            Proverbs 8:34-35 says, “Blessed is the man who listens to me, watching DAILY at my gates, waiting at the posts of my doors. For whoever finds me finds life, and obtains favor from the Lord” (NKJV, emphasis added).
+                            In other words, an anointed daily routine produces glorious results. If you want to put an end to being defeated or discouraged, or going around the same mountain over and over—it’s time to take your faith to a higher level. When you establish the 7 habits of strong Christians in your life, it will keep you strong, protect you from the enemy, and catapult you to VICTORY.
+                            
+                            Habit No. 1: Strong Christian Feed Their Spirit
+                            “Man shall not live by bread alone, but by every word that proceeds from the mouth of God” –Matthew 4:4 (NKJV).‎
+                            This verse says we cannot live on just food for our body—we need food for our spirit, too. A strong Christian knows the reality and severity of the works of the devil and understands the importance of developing a strong spirit to resist him.
+                            How do you feed your spirit? By reading God’s Word. Everyday ‎
+                            Strong Christians know one snack each week (church on Sunday) isn’t enough to sustain us through the trials Jesus told us would come our way (John 16:33). We need daily hot meals to stand on top of every trial in a victory stance.
+                            Gloria Copeland has always emphasized the importance of spending time in the Word on a daily basis. She says, you must “arrange your schedule around the Word instead of trying to make the Word fit into your busy life.”  That means the Word of God has to become a priority in your life—not something you do in your spare time.
+                            Another way to look at it is the way Rick Renner does, which is, “No Word, no breakfast.” Pastor Rick doesn’t eat breakfast until he feeds his spirit with the Word of God every morning.
+                            
+                            Habit No. 2: Strong Christians Build Their Faith
+                            “David encouraged and strengthened himself in the Lord his God.” –1 Samuel 30:6, AMPC
+                            Faith is your responsibility. It isn’t God’s, it isn’t your pastor’s, and it isn’t your spouse’s. The only one who can guarantee that you enjoy a strong faith is YOU. God has given you the tools you need to develop a strong faith—the kind of faith that moves mountains, shuts the mouths of lions, quenches the flames of fire, turns weakness to strength, and puts whole armies to flight (Hebrews 11:33-34).
+                            How do you build that kind of faith? By hearing the Word of God again and again (Romans 10:17). Feeding your faith is the seed; hearing it again and again is how you water the seed and build faith. Just as with natural muscles, repetition is the key to building strong faith. To build your faith, try implementing some of these ideas into your daily routine:
+                            # As you drive to and from work, play already downloaded messages . Then, when you work out, go on a walk, or take your lunch break, put in earbuds and feed your spirit. Download spirit-lifting musics and messages. As you feed your spirit, remember that faith comes by hearing, but so does doubt. So, what are you listening to? What is the news telling you? What are your friends telling you? Guard the precious Word you’ve sown into your heart by refusing to consume anything contrary.
+                            When you build your faith by hearing the Word on a daily basis, truth will come, faith will come and then—VICTORY will come.
+                            
+                            Habit No. 3: Strong Christians Speak the Word
+                            “Death and life are in the power of the tongue.” –Proverbs 18:21 (NKJV). You’ve heard the saying, You are what you eat. But the Bible says, in essence, You are what you speak (Mark 11:23).
+                            Strong Christians speak the Word and only the Word over their lives and the lives of those around them. They know it is often a matter of life and death. And, they don’t intend to waste the power and authority Jesus provided for them.
+                            To get to a place where you speak the Word over every situation, work on mastering the first two habits. By putting God’s Word in your heart on a daily basis, speaking His Word will become your knee-jerk reaction to any situation, which means you will react with an automatic, predictable response—FAITH.
+                            When a trial comes your way, don’t become the proverbial bump on a log and let the devil have the final word—talk back! When the devil tempted Jesus, He answered back (Matthew 4:1-11). How did He answer? With the Word and the Word only. When He came across a fig tree that didn’t produce, He didn’t just accept it—He talked to it (Mark 11:12-14). God uses words to “call those things which be not as though they were” (Romans 4:17, NKJV), and we need to do the same.
+                            No matter what you’re faced with, speak healing, speak blessing, speak abundance, speak forgiveness, speak peace. Speak the Word again and again and again and again. Fire off Scripture like a machine gun. Confess God’s Word in faith—it will change your life.
+                            ‎
+                            Habit No. 4: Strong Christians Control Their Thought Life
+                            “This Book of the Law shall not depart from your mouth, but you shall meditate in it day and night, that you may observe to do according to all that is written in it. For then you will make your way prosperous, and then you will have good success.” –Joshua 1:8 (NKJV).
+                            Is your thought life healthy or toxic? The mind, spirit and body are interconnected— your thoughts affect your words, which affect your health, prosperity, joy, peace and every other area of your life. So, it’s worth taking the time to perfect!
+                            On many Believers’ Voice of Victory (BVOV) broadcasts, Dr. Caroline Leaf has shared about the connection between thoughts and overall success in life. When it comes to taking control of your thoughts, she has this to say: “Thoughts are real things—they occupy real estate in your brain. ‘Bring all thoughts into captivity.’ Our brain is designed to do that. And when you do your brain [will] start operating correctly.”
+                            To bring every thought into captivity (2 Corinthians 10:5), begin focusing on what you’re thinking about. When your thoughts wander off to things like, you’re not going to get healed; you’re going to die; you’ll never get promoted; how do you capture thoughts like these and cast them down? You resist them. You answer them. Never let your thoughts go unanswered. Instead, say, “I’m not taking that thought.”
+                            You can become a master at thought domination by meditating on the Word of God. To meditate means you don’t just hear it—you focus on it, contemplate it and give it serious attention. That’s how you enlarge your capacity for faith, and that’s why the most spiritual people you will ever meet are those who spend time meditating on the Word of God.
+                            
+                            Habit No. 5: Strong Christians Anchor Their Heart Through Praise
+                            “I will bless the Lord at all times; His praise shall continually be in my mouth.” –Psalm 34:1, NKJV
+                            ‎Did you know praise is a language? It’s a language of faith and a language of receiving. A strong Christian is fluent in praise. That’s why we’re called to bless the Lord at all times (Psalm 34:1) because no matter what is happening in our lives, we have countless reasons to thank Him for what He has done, what He is doing, and what He will do.
+                            If praise is continually in your mouth, does that mean only when it’s good? No. That’s easy. Praise is an act of faith. If you believe you receive what you’ve asked—you’ll thank God for it—even if it hasn’t manifested. Praise says, “I know it’s coming.”
+                            Strong Christians know there is a connection between praise and strength. They know a spirit of praise puts you in position and produces spiritual strength.
+                            
+                            Habit No. 6: Strong Christians Pray in the Spirit
+                            “[Build] yourselves up on your most holy faith, praying in the Holy Spirit.”—Jude 20 (NKJV).
+                            A strong Christian knows the importance of keeping his spiritual battery charged. That’s where praying in other tongues comes in. When you pray in the spirit, you edify yourself, which means to improve or uplift. It strengthens your spirit and builds you up in your faith.
+                            The powerful part of praying in other tongues is that it allows you to pray above what you know in the natural. It takes you into the spiritual realm and opens the door to revelation, wisdom, instruction and encouragement.
+                            
+                            Habit No. 7: Strong Christians Get Rid of Baggage
+                            “Therefore, since we are surrounded by such a huge crowd of witnesses to the life of faith, let us strip off every weight that slows us down, especially the sin that so easily trips us up.” –Hebrews 12:1.
+                            Streamlining is a pretty important concept in aerodynamics. To streamline is to reduce resistance, creating a faster and smoother journey. It is studied by NASA engineers, airline pilots, shipbuilders and even athletes. The idea is to remove anything that would slow a craft, or person, down. The ultimate goal in streamlining is optimum performance and a victorious outcome.
+                            That’s what we are called to do in our spiritual lives, too. When God told us to “strip off every weight that slows us down,” He was telling us to streamline our lives so we can enjoy optimum victory. Imagine watching an Olympic runner trying to round the track and run a race wearing a suit of armor. You’d likely coach him through the TV, saying, “Throw off the armor! It’s slowing you down!” That’s what God is saying to us.
+                            What kind of baggage are you carrying today? Worry, anxiety, stress or fear? Maybe it’s a habit of sin you haven’t removed or unforgiveness that’s been festering for years. Whatever it is, make the decision to get rid of it today! It’s slowing you down. Take off anything that is hindering you, and run your race to victory!
+                            
+                            When you put these 7 habits of strong Christians into practice on a daily basis, you will develop the kind of spirit that will cripple the enemy and ensure the kind of victory you’ve always dreamed of. This is the life Jesus died to give you. This is the life you were meant to live.
+                            
+                            culled from Kenneth Copeland Blog                         </p>    
+                    </div>
+        <div>
+            
+        </div>
+                    <a href="#" class="bg-gray-900 text-white font-semibold text-lg text-center py-2 absolute bottom-0 left-0 w-full">Continue reading...</a>
+        
+                </div>
+
+                <div class="hidden absolute w-11/12 h-fit px-8 py-10 bg-white shadow z-10">
+                    <p class="text-justify">
+                        <span class="font-semibold mb-1">Topic: 7 Habits Of a Strong Christian<br>
+                        Author: Evang. Adeyemi Adetayo<br></span>
+                        If you want to grow in your Christian life pls read this article. It is very Inspiring and motivating .
+
+                        When you establish the 7 habits of strong Christians in your life, it will keep you strong, protect you from the enemy, and catapult you to victory.
+                        The secret to your future is hidden. It’s not hidden from you, though—it’s hidden for you. You see, your future is up to you. Whatever you have and whatever happens in your life isn’t an accident, or necessarily always God’s will—it is in your hands more than you may know.
+                        Where can you find this hidden secret? In your daily routine.
+                        ‎What you do on a daily basis will determine what you have in this life. If you’re sowing to your flesh, the results will never be what you want. But if you sow to the spirit, you will become stronger and stronger (Galatians 6:8). You will get to a place where you confidently stand your ground, resist the enemy, and receive more from God—no matter what comes your way.
+                        You have a decision to make. Is victory important to you?
+                        Proverbs 8:34-35 says, “Blessed is the man who listens to me, watching DAILY at my gates, waiting at the posts of my doors. For whoever finds me finds life, and obtains favor from the Lord” (NKJV, emphasis added).
+                        In other words, an anointed daily routine produces glorious results. If you want to put an end to being defeated or discouraged, or going around the same mountain over and over—it’s time to take your faith to a higher level. When you establish the 7 habits of strong Christians in your life, it will keep you strong, protect you from the enemy, and catapult you to VICTORY.
+                        
+                        Habit No. 1: Strong Christian Feed Their Spirit
+                        “Man shall not live by bread alone, but by every word that proceeds from the mouth of God” –Matthew 4:4 (NKJV).‎
+                        This verse says we cannot live on just food for our body—we need food for our spirit, too. A strong Christian knows the reality and severity of the works of the devil and understands the importance of developing a strong spirit to resist him.
+                        How do you feed your spirit? By reading God’s Word. Everyday ‎
+                        Strong Christians know one snack each week (church on Sunday) isn’t enough to sustain us through the trials Jesus told us would come our way (John 16:33). We need daily hot meals to stand on top of every trial in a victory stance.
+                        Gloria Copeland has always emphasized the importance of spending time in the Word on a daily basis. She says, you must “arrange your schedule around the Word instead of trying to make the Word fit into your busy life.”  That means the Word of God has to become a priority in your life—not something you do in your spare time.
+                        Another way to look at it is the way Rick Renner does, which is, “No Word, no breakfast.” Pastor Rick doesn’t eat breakfast until he feeds his spirit with the Word of God every morning.
+                        
+                        Habit No. 2: Strong Christians Build Their Faith
+                        “David encouraged and strengthened himself in the Lord his God.” –1 Samuel 30:6, AMPC
+                        Faith is your responsibility. It isn’t God’s, it isn’t your pastor’s, and it isn’t your spouse’s. The only one who can guarantee that you enjoy a strong faith is YOU. God has given you the tools you need to develop a strong faith—the kind of faith that moves mountains, shuts the mouths of lions, quenches the flames of fire, turns weakness to strength, and puts whole armies to flight (Hebrews 11:33-34).
+                        How do you build that kind of faith? By hearing the Word of God again and again (Romans 10:17). Feeding your faith is the seed; hearing it again and again is how you water the seed and build faith. Just as with natural muscles, repetition is the key to building strong faith. To build your faith, try implementing some of these ideas into your daily routine:
+                        # As you drive to and from work, play already downloaded messages . Then, when you work out, go on a walk, or take your lunch break, put in earbuds and feed your spirit. Download spirit-lifting musics and messages. As you feed your spirit, remember that faith comes by hearing, but so does doubt. So, what are you listening to? What is the news telling you? What are your friends telling you? Guard the precious Word you’ve sown into your heart by refusing to consume anything contrary.
+                        When you build your faith by hearing the Word on a daily basis, truth will come, faith will come and then—VICTORY will come.
+                        
+                        Habit No. 3: Strong Christians Speak the Word
+                        “Death and life are in the power of the tongue.” –Proverbs 18:21 (NKJV). You’ve heard the saying, You are what you eat. But the Bible says, in essence, You are what you speak (Mark 11:23).
+                        Strong Christians speak the Word and only the Word over their lives and the lives of those around them. They know it is often a matter of life and death. And, they don’t intend to waste the power and authority Jesus provided for them.
+                        To get to a place where you speak the Word over every situation, work on mastering the first two habits. By putting God’s Word in your heart on a daily basis, speaking His Word will become your knee-jerk reaction to any situation, which means you will react with an automatic, predictable response—FAITH.
+                        When a trial comes your way, don’t become the proverbial bump on a log and let the devil have the final word—talk back! When the devil tempted Jesus, He answered back (Matthew 4:1-11). How did He answer? With the Word and the Word only. When He came across a fig tree that didn’t produce, He didn’t just accept it—He talked to it (Mark 11:12-14). God uses words to “call those things which be not as though they were” (Romans 4:17, NKJV), and we need to do the same.
+                        No matter what you’re faced with, speak healing, speak blessing, speak abundance, speak forgiveness, speak peace. Speak the Word again and again and again and again. Fire off Scripture like a machine gun. Confess God’s Word in faith—it will change your life.
+                        ‎
+                        Habit No. 4: Strong Christians Control Their Thought Life
+                        “This Book of the Law shall not depart from your mouth, but you shall meditate in it day and night, that you may observe to do according to all that is written in it. For then you will make your way prosperous, and then you will have good success.” –Joshua 1:8 (NKJV).
+                        Is your thought life healthy or toxic? The mind, spirit and body are interconnected— your thoughts affect your words, which affect your health, prosperity, joy, peace and every other area of your life. So, it’s worth taking the time to perfect!
+                        On many Believers’ Voice of Victory (BVOV) broadcasts, Dr. Caroline Leaf has shared about the connection between thoughts and overall success in life. When it comes to taking control of your thoughts, she has this to say: “Thoughts are real things—they occupy real estate in your brain. ‘Bring all thoughts into captivity.’ Our brain is designed to do that. And when you do your brain [will] start operating correctly.”
+                        To bring every thought into captivity (2 Corinthians 10:5), begin focusing on what you’re thinking about. When your thoughts wander off to things like, you’re not going to get healed; you’re going to die; you’ll never get promoted; how do you capture thoughts like these and cast them down? You resist them. You answer them. Never let your thoughts go unanswered. Instead, say, “I’m not taking that thought.”
+                        You can become a master at thought domination by meditating on the Word of God. To meditate means you don’t just hear it—you focus on it, contemplate it and give it serious attention. That’s how you enlarge your capacity for faith, and that’s why the most spiritual people you will ever meet are those who spend time meditating on the Word of God.
+                        
+                        Habit No. 5: Strong Christians Anchor Their Heart Through Praise
+                        “I will bless the Lord at all times; His praise shall continually be in my mouth.” –Psalm 34:1, NKJV
+                        ‎Did you know praise is a language? It’s a language of faith and a language of receiving. A strong Christian is fluent in praise. That’s why we’re called to bless the Lord at all times (Psalm 34:1) because no matter what is happening in our lives, we have countless reasons to thank Him for what He has done, what He is doing, and what He will do.
+                        If praise is continually in your mouth, does that mean only when it’s good? No. That’s easy. Praise is an act of faith. If you believe you receive what you’ve asked—you’ll thank God for it—even if it hasn’t manifested. Praise says, “I know it’s coming.”
+                        Strong Christians know there is a connection between praise and strength. They know a spirit of praise puts you in position and produces spiritual strength.
+                        
+                        Habit No. 6: Strong Christians Pray in the Spirit
+                        “[Build] yourselves up on your most holy faith, praying in the Holy Spirit.”—Jude 20 (NKJV).
+                        A strong Christian knows the importance of keeping his spiritual battery charged. That’s where praying in other tongues comes in. When you pray in the spirit, you edify yourself, which means to improve or uplift. It strengthens your spirit and builds you up in your faith.
+                        The powerful part of praying in other tongues is that it allows you to pray above what you know in the natural. It takes you into the spiritual realm and opens the door to revelation, wisdom, instruction and encouragement.
+                        
+                        Habit No. 7: Strong Christians Get Rid of Baggage
+                        “Therefore, since we are surrounded by such a huge crowd of witnesses to the life of faith, let us strip off every weight that slows us down, especially the sin that so easily trips us up.” –Hebrews 12:1.
+                        Streamlining is a pretty important concept in aerodynamics. To streamline is to reduce resistance, creating a faster and smoother journey. It is studied by NASA engineers, airline pilots, shipbuilders and even athletes. The idea is to remove anything that would slow a craft, or person, down. The ultimate goal in streamlining is optimum performance and a victorious outcome.
+                        That’s what we are called to do in our spiritual lives, too. When God told us to “strip off every weight that slows us down,” He was telling us to streamline our lives so we can enjoy optimum victory. Imagine watching an Olympic runner trying to round the track and run a race wearing a suit of armor. You’d likely coach him through the TV, saying, “Throw off the armor! It’s slowing you down!” That’s what God is saying to us.
+                        What kind of baggage are you carrying today? Worry, anxiety, stress or fear? Maybe it’s a habit of sin you haven’t removed or unforgiveness that’s been festering for years. Whatever it is, make the decision to get rid of it today! It’s slowing you down. Take off anything that is hindering you, and run your race to victory!
+                        
+                        When you put these 7 habits of strong Christians into practice on a daily basis, you will develop the kind of spirit that will cripple the enemy and ensure the kind of victory you’ve always dreamed of. This is the life Jesus died to give you. This is the life you were meant to live.
+                        
+                        culled from Kenneth Copeland Blog
+                    </p>
+                </div>
+        
+                <div class="relative bg-white shadow hover:shadow-black hover:transition-all hover:duration-150 lg:w-3/12 w-10/12 h-[70vh] rounded-lg p-4 overflow-hidden ml-auto mr-auto lg:ml-0 lg:mr-0 mb-10">
+                    <div class="w-full h-[35vh] bg-bg7 bg-cover bg-no-repeat bg-gray-900 bg-opacity-50 bg-blend-darken rounded-md p-4">
+                    </div>
+        
+                    <div>
+                        <h1 class="grid font-semibold text-xl text-left leading-none mt-2">
+                            <span class="text-gray-900">Raising Compliant and Defiant Children</span>
+                            <span class="text-gray-900 font-extralight text-sm"> Evang. Adetayo Adeyemi</span>
+                        </h1>
+        
+                        <p class="mt-1 text-base font-normal text-gray-400 text-justify">
+                            ‘’And all thy children shall be taught of the Lord’’ Isaiah 54:13 KJV
+                            There are two kinds of children. The first are the compliant ones- those who sleep through the night from their second week in life. They coo at their grandparents and smile while their diapers are being changed. During later childhood, they love to keep their rooms clean and do their homework brilliantly without being asked.
+                            The defiant ones – story willed kids. They get their mothers attention long before birth because they scratch on the walls (of the womb) and kick like ‘wow’. They enter the world yellowing about the temperature of the room, and complaining about incompetence of the nursing staff. From eighteen months forward, they want to run things and tell everybody what to do. Their favourite word is ‘no’.
+                            Compliant children are a breeze to raise, but defiant ones can turn out fine too. The secret is to shape their strong will during early years, without breaking their spirit. This is done by setting boundaries very clearly, then enforcing them with firmness. Even the toughest kids find security in structured environment where other people’s right, as well as their own is protected. When this is done right, even the most independent child can learn to be responsible and self-disciplined. And God will work with you.
+                            His promises, ‘‘And all thy children shall be taught of the Lord and great shall the peace of thy children’’
+                            
+                            TOO LATE TO FAIL
+                            I bear in my body the marks of Christ that distinguish me from others in the world. God is interested in my success, I cannot fail.
+                            I am created a star, destined to overcome, born for glory, designed to shine, fashioned for the top, redeemed to excel, very important and greatly respected for success.
+                            Sanctified to manifest, called for victory, chosen to reign, commissioned to prosper, anointed for breakthrough, prepared for exploit, preserved to flourish, and distinguished for favour.
+                            God’s mind is made up concerning me. I am the Excellency of all generations. That is why I cannot fail. Even if my enemy so much desire to pull me down, God has gone too far to stop now. It is already too late to fail. Therefore I shall not fail.
+                            
+                            HOW TO GET YOUR PRAYERS ANSWERED
+                            Have you spent weeks, months or even years praying about something specific? Are you saying,“Lord, I know what your word says. So why isn’t it working for me?” In order to get the result you are praying for, you must be able to answer these three questions.
+                            1.Are you praying for God’s will? Jesus said “if you abide in Me, and My words abide in you, you will ask what you shall desire, and it shall be done for you” John 15:7 (NKJV). The word “ABIDE” speaks of intimacy and close connection, paints a picture of home – the place where you experience provision and nurture.
+                            When you have this kind of relationship with God, you’ll know His heart and His desires so well that your will is going to line up with is will, and as a result, you will get what you ask for. Don’t just assume you are praying in line with God’s will, instead test your prayer by applying the ‘abiding principles.
+                            Abiding brings spiritual maturity and when you are spiritually mature, you begin to pray different, not self-centered and self-seeking prayers. The time you spent in the presence of the one you love most becomes more important to you than the end result hoped for. You don’t mind waiting because you realize God’s timing is always perfect.
+                            And when He chooses to say no to your request, you rejoice and say, “Then You have something better in mind for me, and I trust You.” Have you reached that point in your walk with Him?
+                            2.Are self-sabotaging your prayers? In Isaiah58; 6-9, God told the Israelites the reason they were not getting answers to their prayers was because they were engaged in ‘CRITICISM AND FINGER-POINTING’ (vs9-10). Have you been guilty of that? It’s as important to glorify God through the words you speak when you are not praying as well as when you are. The Bible says there is a direct link between having a critical, careless tongue and not getting your prayers answered. The way you treat others determines how GOD treats you in return (see Ephesians 6:7-8). God lays it squarely on the line. Stop oppressing your workers, treat them fairly, share your food with hungry and those who are helpless, poor and destitutes. Doing these, GOD will shed his own glorious light on you and your godliness will lead you forward, goodness will be a shield before you, and glory of the lord will protect you from behind. Then when you call, the Lord will answer.
+                            All you need to do is to stop oppressing the week, stop making false accusations and spreading vicious rumours!  On this point, your light will shine out of darkness, around you shall be as bright as day and the promises in Isaiah 58:11 shall be made manifest. That means the answer to your prayers is contingent upon two things: YOUR ATTITUDE AND YOUR ACTION TOWARDS OTHERS.
+                            3. Do you show a loving attitude? Eph 5:2 KJV “Walk in love as Christ also hath loved us, and hath given himself for us”. Your mouth is such a major part in the love walk. We fail to realize how much we can do for people by building them up with our words. We need to be very careful not to say things that tear them down. The Bible says “the heart is deceitful above all things” (Jer.17:19). What vibes are you giving off? What are you saying out there? When we are too busy to show our love, then we should examine our heart, motives and attitudes. How do we do that? By examining our tongue and what’s coming out of our mouth. When last have you seen your doctor and he asked you to open your mouth and say “Aaah”? The reason they asked you to do that is to examine your tongue. Just like your tongue tells a physician a lot about your physical health, it can also tell a lot about your spiritual health. 
+                            
+                            Remember, to get your prayers answered, you must:
+                            1.Learn to abide in Christ. This will bring you to a higher level of spiritual maturity and helps you discover the authority you have in prayer; 
+                            2.Speak in line with God’s word. This can move mountains in your life (see Mark 11:23);
+                            3.Grow in your love walk. This opens up powerful opportunities for you to show others who God really is.
+                            
+                            FIVE KEYS TO IMPROVING YOUR HEALTH
+                            Illnesses cause inconvenience to the body as well as to your account. Illnesses do not only make you feel bad, but also makes you unable to do things effectively. Illnesses create a need for someone to look after you, and cause you to pay expensive medicines and treatment. Well, as it has been said that “prevention is better than cure”, some illnesses cannot be cured but managed. Managed illnesses are results of chronic diseases that manifests in the body system for a longer period of time, but takes short time to progress. There is much you can do to slow down or even prevent the occurrence of illnesses. Five things to consider that you can do today to get on the road to better health are:
+                            Practice good hygiene
+                            According to The Mayo Clinic, “one of the best ways to avoid getting sick and spreading illness is to wash your hands”. One of the easiest ways to catch a cold or influenza is to rub your nose or your eyes when your hands have been contaminated with germs. Your best defense against such contamination is to wash your hands regularly. Good hygiene can also prevent the spread of more serious conditions, such as pneumonia and diarrhea, which every year causes the death of over two million children under the age of five. Even the spread of the deadly Lassa fever can be minimized by observing a good hygiene practice.
+                            There are certain times when hand washing is particularly important to protect your own health and that of others. You should wash your hands:
+                            After using the toilet
+                            After changing diapers or helping a child to use the toilet
+                            Before and after treating a wound or cut
+                            Before and after being with someone who is sick
+                            Before preparing, serving or eating food
+                            After sneezing, coughing or blowing your nose
+                            After touching an animal waste
+                            After handling garbage
+                            And do not take it for granted that you are cleaning your hands properly. Studies have shown that a large percentage of those who use public toilets do not wash their hands afterwards or do not wash them correctly. How then should you wash your hands?
+                            Wet your hands in clean running water and apply soap
+                            Rub your hands together to make a lather, not forgetting to clean your nails, your thumbs, the backs or your hands, and between your fingers
+                            Keep rubbing for at least 20 seconds
+                            Rinse in clean running water
+                            Dry with a clean cloth or paper towel.
+                            Such measures are simple but can avert illness and save lives.
+                            
+                            Use a safe water supply
+                            obtaining a sufficient clean water for one’s family is a chore in some countries. Yet, access to clean water can become a concern in any part of the world when a main supply that is usually good to drink becomes contaminated as a result of flood, storm, pipe break, or some other issues. If water does not come from a safe source or is not stored appropriately, it can cause parasite infestation, cholera, life-threatening diarrhea, typhoid, hepatitis, and other infections. Unsafe drinking water is one of the causes of an estimated 1.7 billion cases of diarrheal diseases every year.
+                            Cholera is most often contracted when a person drinks water or eats food that is contaminated with feacal matter from infected people. What steps can you take to protect yourself, even in the immediate aftermath of a disaster, from this and other types of water contamination?
+                            Ensure  that your drinking water, including the water used for brushing of teeth, making ice, washing food and dishes, or cooking comes from a safe source, such as an adequately treated public supply or sealed bottles from a reputable firm
+                            If there is any possibility that your piped supply has been contaminated, boil your water before use or treat it with an appropriate chemical product
+                            When using chemicals ssuch as chlorine or water purifying tablets, follow the maker’s directions carefully
+                            Use quality water filters, if available and affordable
+                            If no water treatments are available, add household bleach – two drops per liter of water – mix well and leave it for 30 minutes before using it.
+                            Always store treated water in clean , covered containers to protect it from possible re-contamination
+                            Ensure that any vessel used to take water from your stored supply, such as ladle, is clean
+                            Handle water containers with clean hands, and do no dip your hands or fingers into water used for drinking
+                            
+                            
+                            Watch what you eat
+                            Good health is impossible without good nutrition, and for good nutrition-you need a healthy balanced diet. You may need to consider your intake of salt, fats and sugar, and you should watch your portion sizes                         </p>    
+                    </div>
+        
+                    <a href="#" id="button6" class="bg-gray-900 text-white font-semibold text-lg text-center py-2 absolute bottom-0 left-0 w-full">Continue reading...</a>
+        
+                </div>
+
+                <div class="hidden absolute w-11/12 h-fit px-8 py-10 bg-white shadow z-10">
+                    <p class="text-justify">
+                        <span class="font-semibold mb-1">Topic: Raising Compliant and Defiant Children<br>
+                        Author: Evang. Adeyemi Adetayo<br></span>
+                        ‘’And all thy children shall be taught of the Lord’’ Isaiah 54:13 KJV
+                        There are two kinds of children. The first are the compliant ones- those who sleep through the night from their second week in life. They coo at their grandparents and smile while their diapers are being changed. During later childhood, they love to keep their rooms clean and do their homework brilliantly without being asked.
+                        The defiant ones – story willed kids. They get their mothers attention long before birth because they scratch on the walls (of the womb) and kick like ‘wow’. They enter the world yellowing about the temperature of the room, and complaining about incompetence of the nursing staff. From eighteen months forward, they want to run things and tell everybody what to do. Their favourite word is ‘no’.
+                        Compliant children are a breeze to raise, but defiant ones can turn out fine too. The secret is to shape their strong will during early years, without breaking their spirit. This is done by setting boundaries very clearly, then enforcing them with firmness. Even the toughest kids find security in structured environment where other people’s right, as well as their own is protected. When this is done right, even the most independent child can learn to be responsible and self-disciplined. And God will work with you.
+                        His promises, ‘‘And all thy children shall be taught of the Lord and great shall the peace of thy children’’
+                        
+                        TOO LATE TO FAIL
+                        I bear in my body the marks of Christ that distinguish me from others in the world. God is interested in my success, I cannot fail.
+                        I am created a star, destined to overcome, born for glory, designed to shine, fashioned for the top, redeemed to excel, very important and greatly respected for success.
+                        Sanctified to manifest, called for victory, chosen to reign, commissioned to prosper, anointed for breakthrough, prepared for exploit, preserved to flourish, and distinguished for favour.
+                        God’s mind is made up concerning me. I am the Excellency of all generations. That is why I cannot fail. Even if my enemy so much desire to pull me down, God has gone too far to stop now. It is already too late to fail. Therefore I shall not fail.
+                        
+                        HOW TO GET YOUR PRAYERS ANSWERED
+                        Have you spent weeks, months or even years praying about something specific? Are you saying,“Lord, I know what your word says. So why isn’t it working for me?” In order to get the result you are praying for, you must be able to answer these three questions.
+                        1.Are you praying for God’s will? Jesus said “if you abide in Me, and My words abide in you, you will ask what you shall desire, and it shall be done for you” John 15:7 (NKJV). The word “ABIDE” speaks of intimacy and close connection, paints a picture of home – the place where you experience provision and nurture.
+                        When you have this kind of relationship with God, you’ll know His heart and His desires so well that your will is going to line up with is will, and as a result, you will get what you ask for. Don’t just assume you are praying in line with God’s will, instead test your prayer by applying the ‘abiding principles.
+                        Abiding brings spiritual maturity and when you are spiritually mature, you begin to pray different, not self-centered and self-seeking prayers. The time you spent in the presence of the one you love most becomes more important to you than the end result hoped for. You don’t mind waiting because you realize God’s timing is always perfect.
+                        And when He chooses to say no to your request, you rejoice and say, “Then You have something better in mind for me, and I trust You.” Have you reached that point in your walk with Him?
+                        2.Are self-sabotaging your prayers? In Isaiah58; 6-9, God told the Israelites the reason they were not getting answers to their prayers was because they were engaged in ‘CRITICISM AND FINGER-POINTING’ (vs9-10). Have you been guilty of that? It’s as important to glorify God through the words you speak when you are not praying as well as when you are. The Bible says there is a direct link between having a critical, careless tongue and not getting your prayers answered. The way you treat others determines how GOD treats you in return (see Ephesians 6:7-8). God lays it squarely on the line. Stop oppressing your workers, treat them fairly, share your food with hungry and those who are helpless, poor and destitutes. Doing these, GOD will shed his own glorious light on you and your godliness will lead you forward, goodness will be a shield before you, and glory of the lord will protect you from behind. Then when you call, the Lord will answer.
+                        All you need to do is to stop oppressing the week, stop making false accusations and spreading vicious rumours!  On this point, your light will shine out of darkness, around you shall be as bright as day and the promises in Isaiah 58:11 shall be made manifest. That means the answer to your prayers is contingent upon two things: YOUR ATTITUDE AND YOUR ACTION TOWARDS OTHERS.
+                        3. Do you show a loving attitude? Eph 5:2 KJV “Walk in love as Christ also hath loved us, and hath given himself for us”. Your mouth is such a major part in the love walk. We fail to realize how much we can do for people by building them up with our words. We need to be very careful not to say things that tear them down. The Bible says “the heart is deceitful above all things” (Jer.17:19). What vibes are you giving off? What are you saying out there? When we are too busy to show our love, then we should examine our heart, motives and attitudes. How do we do that? By examining our tongue and what’s coming out of our mouth. When last have you seen your doctor and he asked you to open your mouth and say “Aaah”? The reason they asked you to do that is to examine your tongue. Just like your tongue tells a physician a lot about your physical health, it can also tell a lot about your spiritual health. 
+                        
+                        Remember, to get your prayers answered, you must:
+                        1.Learn to abide in Christ. This will bring you to a higher level of spiritual maturity and helps you discover the authority you have in prayer; 
+                        2.Speak in line with God’s word. This can move mountains in your life (see Mark 11:23);
+                        3.Grow in your love walk. This opens up powerful opportunities for you to show others who God really is.
+                        
+                        FIVE KEYS TO IMPROVING YOUR HEALTH
+                        Illnesses cause inconvenience to the body as well as to your account. Illnesses do not only make you feel bad, but also makes you unable to do things effectively. Illnesses create a need for someone to look after you, and cause you to pay expensive medicines and treatment. Well, as it has been said that “prevention is better than cure”, some illnesses cannot be cured but managed. Managed illnesses are results of chronic diseases that manifests in the body system for a longer period of time, but takes short time to progress. There is much you can do to slow down or even prevent the occurrence of illnesses. Five things to consider that you can do today to get on the road to better health are:
+                        Practice good hygiene
+                        According to The Mayo Clinic, “one of the best ways to avoid getting sick and spreading illness is to wash your hands”. One of the easiest ways to catch a cold or influenza is to rub your nose or your eyes when your hands have been contaminated with germs. Your best defense against such contamination is to wash your hands regularly. Good hygiene can also prevent the spread of more serious conditions, such as pneumonia and diarrhea, which every year causes the death of over two million children under the age of five. Even the spread of the deadly Lassa fever can be minimized by observing a good hygiene practice.
+                        There are certain times when hand washing is particularly important to protect your own health and that of others. You should wash your hands:
+                        After using the toilet
+                        After changing diapers or helping a child to use the toilet
+                        Before and after treating a wound or cut
+                        Before and after being with someone who is sick
+                        Before preparing, serving or eating food
+                        After sneezing, coughing or blowing your nose
+                        After touching an animal waste
+                        After handling garbage
+                        And do not take it for granted that you are cleaning your hands properly. Studies have shown that a large percentage of those who use public toilets do not wash their hands afterwards or do not wash them correctly. How then should you wash your hands?
+                        Wet your hands in clean running water and apply soap
+                        Rub your hands together to make a lather, not forgetting to clean your nails, your thumbs, the backs or your hands, and between your fingers
+                        Keep rubbing for at least 20 seconds
+                        Rinse in clean running water
+                        Dry with a clean cloth or paper towel.
+                        Such measures are simple but can avert illness and save lives.
+                        
+                        Use a safe water supply
+                        obtaining a sufficient clean water for one’s family is a chore in some countries. Yet, access to clean water can become a concern in any part of the world when a main supply that is usually good to drink becomes contaminated as a result of flood, storm, pipe break, or some other issues. If water does not come from a safe source or is not stored appropriately, it can cause parasite infestation, cholera, life-threatening diarrhea, typhoid, hepatitis, and other infections. Unsafe drinking water is one of the causes of an estimated 1.7 billion cases of diarrheal diseases every year.
+                        Cholera is most often contracted when a person drinks water or eats food that is contaminated with feacal matter from infected people. What steps can you take to protect yourself, even in the immediate aftermath of a disaster, from this and other types of water contamination?
+                        Ensure  that your drinking water, including the water used for brushing of teeth, making ice, washing food and dishes, or cooking comes from a safe source, such as an adequately treated public supply or sealed bottles from a reputable firm
+                        If there is any possibility that your piped supply has been contaminated, boil your water before use or treat it with an appropriate chemical product
+                        When using chemicals ssuch as chlorine or water purifying tablets, follow the maker’s directions carefully
+                        Use quality water filters, if available and affordable
+                        If no water treatments are available, add household bleach – two drops per liter of water – mix well and leave it for 30 minutes before using it.
+                        Always store treated water in clean , covered containers to protect it from possible re-contamination
+                        Ensure that any vessel used to take water from your stored supply, such as ladle, is clean
+                        Handle water containers with clean hands, and do no dip your hands or fingers into water used for drinking
+                        
+                        
+                        Watch what you eat
+                        Good health is impossible without good nutrition, and for good nutrition-you need a healthy balanced diet. You may need to consider your intake of salt, fats and sugar, and you should watch your portion sizes
+                    </p>
+                </div>
+            </div>
+        </div>
+      
+       
+
+    </main>
+
+
+    <footer class="text-gray-900">
+        <div class="ml-auto mr-auto flex items-center w-fit gap-2">
+            <img class="w-16 h-auto" src="assets/Logo.png">
+            <p class="grid font-bold text-lg leading-none"><span>ZION ASSEMBLY</span> <span>CHURCH OF GOD, NIGERIA.</span> </p>
+        </div>
+
+        <div class="mt-7">
+            <p class="text-center font-semibold">&copy; Copyright ZACOG 2023. All Right Reserved. Designed and Developed by ZACOG IT DEPARTMENT.</p>
+        </div>
+
+        <div class="w-fit flex ml-auto mr-auto mt-5 mb-10">
+            <svg class="w-5 h-auto mr-7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="24px" height="24px" fill-rule="nonzero"><g fill="rgb(32, 33, 36)" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M12,2c-5.511,0 -10,4.489 -10,10c0,5.511 4.489,10 10,10c5.511,0 10,-4.489 10,-10c0,-5.511 -4.489,-10 -10,-10zM12,4c4.43012,0 8,3.56988 8,8c0,4.01447 -2.93468,7.31302 -6.78125,7.89844v-5.51367h2.32813l0.36523,-2.36524h-2.69336v-1.29297c0,-0.983 0.32023,-1.85547 1.24023,-1.85547h1.47656v-2.06445c-0.26,-0.035 -0.8087,-0.11133 -1.8457,-0.11133c-2.166,0 -3.43555,1.144 -3.43555,3.75v1.57422h-2.22656v2.36524h2.22656v5.49414c-3.78401,-0.63806 -6.6543,-3.90867 -6.6543,-7.87891c0,-4.43012 3.56988,-8 8,-8z"></path></g></g></svg>      
+            <svg class="w-5 h-auto mr-7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="50px" height="50px" fill-rule="nonzero"><g fill="rgb(32, 33, 36)" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M34.21875,5.46875c-5.98047,0 -10.84375,4.86328 -10.84375,10.84375c0,0.35938 0.08984,0.71094 0.125,1.0625c-7.39453,-0.70703 -13.93359,-4.26953 -18.375,-9.71875c-0.20703,-0.26172 -0.52734,-0.40234 -0.86328,-0.37891c-0.33203,0.02344 -0.62891,0.21484 -0.79297,0.50391c-0.93359,1.60547 -1.46875,3.45313 -1.46875,5.4375c0,2.40234 0.85938,4.60156 2.1875,6.40625c-0.25781,-0.11328 -0.53906,-0.17578 -0.78125,-0.3125c-0.30859,-0.16406 -0.67969,-0.15625 -0.98047,0.02344c-0.30078,0.17969 -0.48438,0.50391 -0.48828,0.85156v0.125c0,3.68359 1.90625,6.88281 4.71875,8.84375c-0.03125,-0.00391 -0.0625,0.00781 -0.09375,0c-0.34375,-0.05859 -0.69141,0.0625 -0.92187,0.32422c-0.23047,0.26172 -0.30469,0.625 -0.20312,0.95703c1.11719,3.47266 3.96875,6.125 7.5,7.09375c-2.8125,1.67188 -6.07422,2.65625 -9.59375,2.65625c-0.76172,0 -1.49219,-0.03906 -2.21875,-0.125c-0.46875,-0.0625 -0.91797,0.21094 -1.07422,0.65625c-0.16016,0.44531 0.01563,0.94141 0.41797,1.1875c4.51172,2.89453 9.86719,4.59375 15.625,4.59375c9.33203,0 16.65234,-3.89844 21.5625,-9.46875c4.91016,-5.57031 7.46875,-12.80469 7.46875,-19.5625c0,-0.28516 -0.02344,-0.5625 -0.03125,-0.84375c1.83203,-1.40234 3.46875,-3.04687 4.75,-4.96875c0.25391,-0.37109 0.22656,-0.86719 -0.06641,-1.21094c-0.28906,-0.34375 -0.77734,-0.44922 -1.18359,-0.25781c-0.51562,0.23047 -1.11719,0.25391 -1.65625,0.4375c0.71094,-0.94922 1.32031,-1.97266 1.6875,-3.125c0.125,-0.39453 -0.01172,-0.82812 -0.33594,-1.08594c-0.32422,-0.25391 -0.77734,-0.28516 -1.13281,-0.07031c-1.70703,1.01172 -3.59766,1.72266 -5.59375,2.15625c-1.9375,-1.8125 -4.48828,-3.03125 -7.34375,-3.03125zM34.21875,7.46875c2.55078,0 4.85547,1.08984 6.46875,2.8125c0.24219,0.25 0.59766,0.35547 0.9375,0.28125c1.30469,-0.25781 2.54297,-0.63672 3.75,-1.125c-0.69531,0.9375 -1.55469,1.73828 -2.5625,2.34375c-0.45703,0.22266 -0.67187,0.75 -0.50391,1.23047c0.16406,0.47656 0.66406,0.75391 1.16016,0.64453c1,-0.12109 1.89063,-0.52734 2.84375,-0.78125c-0.85547,0.92578 -1.79297,1.76172 -2.8125,2.5c-0.27734,0.20313 -0.42969,0.53125 -0.40625,0.875c0.01563,0.40625 0.03125,0.80859 0.03125,1.21875c0,6.25 -2.39844,13.03516 -6.96875,18.21875c-4.57031,5.18359 -11.28125,8.8125 -20.0625,8.8125c-3.98828,0 -7.75391,-0.88281 -11.15625,-2.4375c4.21875,-0.32422 8.10938,-1.81641 11.25,-4.28125c0.32813,-0.26172 0.45703,-0.69922 0.32422,-1.09766c-0.13281,-0.39844 -0.5,-0.67187 -0.91797,-0.68359c-3.29687,-0.05859 -6.05859,-1.97656 -7.53125,-4.6875c0.05469,0 0.10156,0 0.15625,0c0.98828,0 1.96484,-0.125 2.875,-0.375c0.4375,-0.12891 0.73828,-0.53516 0.72266,-0.99219c-0.01562,-0.45703 -0.33984,-0.84766 -0.78516,-0.94531c-3.55859,-0.71875 -6.22656,-3.61719 -6.84375,-7.21875c1.00781,0.34766 2.03906,0.62109 3.15625,0.65625c0.45703,0.02734 0.87109,-0.25781 1.01172,-0.69141c0.14063,-0.43359 -0.03125,-0.91016 -0.41797,-1.15234c-2.375,-1.58984 -3.9375,-4.29687 -3.9375,-7.375c0,-1.14062 0.29688,-2.1875 0.6875,-3.1875c5,5.48828 12,9.13281 19.90625,9.53125c0.3125,0.01563 0.61719,-0.11328 0.82031,-0.35156c0.20313,-0.24219 0.28125,-0.5625 0.21094,-0.86719c-0.15234,-0.64844 -0.25,-1.33594 -0.25,-2.03125c0,-4.89844 3.94531,-8.84375 8.84375,-8.84375z"></path></g></g></svg>
+            <svg class="w-5 h-auto mr-7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="30px" height="30px" fill-rule="nonzero"><g fill="rgb(32, 33, 36)" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M4,5c-1.09306,0 -2,0.90694 -2,2v16c0,1.09306 0.90694,2 2,2h22c1.09306,0 2,-0.90694 2,-2v-16c0,-1.09306 -0.90694,-2 -2,-2zM6.69922,7h16.60156l-8.30078,6.13477zM5,9.47461l10,7.39062l10,-7.39062v13.52539h-20z"></path></g></g></svg>            
+            <svg class="w-5 h-auto mr-7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="50px" height="50px" fill-rule="nonzero"><g fill="rgb(32, 33, 36)" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M24.40234,9c-6.60156,0 -12.80078,0.5 -16.10156,1.19922c-2.19922,0.5 -4.10156,2 -4.5,4.30078c-0.39844,2.39844 -0.80078,6 -0.80078,10.5c0,4.5 0.39844,8 0.89844,10.5c0.40234,2.19922 2.30078,3.80078 4.5,4.30078c3.50391,0.69922 9.5,1.19922 16.10156,1.19922c6.60156,0 12.59766,-0.5 16.09766,-1.19922c2.20313,-0.5 4.10156,-2 4.5,-4.30078c0.40234,-2.5 0.90234,-6.09766 1,-10.59766c0,-4.5 -0.5,-8.10156 -1,-10.60156c-0.39844,-2.19922 -2.29687,-3.80078 -4.5,-4.30078c-3.5,-0.5 -9.59766,-1 -16.19531,-1zM24.40234,11c7.19922,0 12.99609,0.59766 15.79688,1.09766c1.5,0.40234 2.69922,1.40234 2.89844,2.70313c0.60156,3.19922 1,6.60156 1,10.10156c-0.09766,4.29688 -0.59766,7.79688 -1,10.29688c-0.29687,1.89844 -2.29687,2.5 -2.89844,2.70313c-3.60156,0.69922 -9.60156,1.19531 -15.60156,1.19531c-6,0 -12.09766,-0.39844 -15.59766,-1.19531c-1.5,-0.40234 -2.69922,-1.40234 -2.89844,-2.70312c-0.80078,-2.80078 -1.10156,-6.5 -1.10156,-10.19922c0,-4.60156 0.40234,-8 0.80078,-10.09766c0.30078,-1.90234 2.39844,-2.50391 2.89844,-2.70312c3.30078,-0.69922 9.40234,-1.19922 15.70313,-1.19922zM19,17v16l14,-8zM21,20.40234l8,4.59766l-8,4.59766z"></path></g></g></svg>
+            <svg class="w-5 h-auto mr-7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="50px" height="50px" fill-rule="nonzero"><g fill="rgb(32, 33, 36)" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M25,2c-12.6907,0 -23,10.3093 -23,23c0,12.69071 10.3093,23 23,23c12.69071,0 23,-10.30929 23,-23c0,-12.6907 -10.30929,-23 -23,-23zM25,4c11.60983,0 21,9.39017 21,21c0,11.60983 -9.39017,21 -21,21c-2.12364,0 -4.17229,-0.31786 -6.10352,-0.90234c0.86025,-1.43824 1.97086,-3.49407 2.41211,-5.19141c0.26213,-1.00636 1.33984,-5.11133 1.33984,-5.11133c0.7004,1.33714 2.74684,2.46875 4.92578,2.46875c6.4839,0 11.1582,-5.96299 11.1582,-13.37305c0,-7.1041 -5.79701,-12.41797 -13.25586,-12.41797c-9.27973,0 -14.20508,6.22817 -14.20508,13.00977c0,3.15388 1.67744,7.07977 4.36328,8.33008c0.40684,0.18937 0.62531,0.10733 0.71875,-0.28711c0.07194,-0.29935 0.43475,-1.7586 0.59766,-2.4375c0.0521,-0.21665 0.02687,-0.40384 -0.14844,-0.61719c-0.88894,-1.0783 -1.60156,-3.0589 -1.60156,-4.90625c0,-4.74241 3.59028,-9.33203 9.70703,-9.33203c5.28156,0 8.98047,3.60045 8.98047,8.74805c0,5.81575 -2.9366,9.8457 -6.75781,9.8457c-2.11031,0 -3.6905,-1.74581 -3.18359,-3.88672c0.60779,-2.55519 1.78125,-5.31251 1.78125,-7.1582c0,-1.65054 -0.88576,-3.02734 -2.7207,-3.02734c-2.15744,0 -3.89062,2.23055 -3.89062,5.2207c0,1.90275 0.64453,3.19141 0.64453,3.19141c0,0 -2.13118,9.0105 -2.52148,10.6875c-0.39114,1.67579 -0.28638,3.93285 -0.125,5.61328c-7.6941,-3.11433 -13.11523,-10.64747 -13.11523,-19.4668c0,-11.60982 9.39017,-21 21,-21z"></path></g></g></svg>
+        </div>
+
+    </footer>
+
+    </body>
+    </html>
