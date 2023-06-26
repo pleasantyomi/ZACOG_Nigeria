@@ -23,23 +23,32 @@
 
                 <!-- mobile view hamburger items -->
                 <div id="hamburger-contents" class="hidden absolute bg-white w-full md:w-1/2 h-screen lg:hidden left-0 top-0 z-10">
-                    <div onclick="hamburgerClose()">
-                        <svg class="h-6 w-auto mr-5 mt-4 float-right" width="26" height="26" xmlns="http://www.w3.org/2000/svg"><path d="M23.607.98l1.414 1.413L14.414 13l10.607 10.607-1.414 1.414L13 14.414 2.393 25.021.98 23.607 11.586 13 .98 2.393 2.393.98 13 11.586 23.607.98z" fill="rgb(32, 33, 36)" fill-rule="evenodd"/></svg>
-                    </div>
 
-                    <div class="mt-6 mb-10">
-                        <a href="index.html">
-                            <img class="h-12 w-auto ml-auto mr-auto" src="assets/logo.webp">
-                        </a>
-                    </div>
+                    <div class="flex items-center justify-between px-6 pt-3 pb-5">
+                         <div onclick="hamburgerClose()">
+                             <svg class="h-6 w-auto" width="26" height="26" xmlns="http://www.w3.org/2000/svg"><path d="M23.607.98l1.414 1.413L14.414 13l10.607 10.607-1.414 1.414L13 14.414 2.393 25.021.98 23.607 11.586 13 .98 2.393 2.393.98 13 11.586 23.607.98z" fill="rgb(32, 33, 36)" fill-rule="evenodd"/></svg>
+                         </div>
 
+                         <div class="content-center contents self-center">
+                            <a href="index.html">
+                                <img class="h-12 w-auto ml-auto mr-auto" src="assets/logo.webp"> 
+                            </a>
+                        </div>
+
+                        <div class="">
+                            <svg class=" w-6 h-auto"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="30px" height="30px" fill-rule="nonzero"><g fill="rgb(32, 33, 36)" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M13,3c-5.511,0 -10,4.489 -10,10c0,5.511 4.489,10 10,10c2.39651,0 4.59738,-0.85101 6.32227,-2.26367l5.9707,5.9707c0.25082,0.26124 0.62327,0.36648 0.97371,0.27512c0.35044,-0.09136 0.62411,-0.36503 0.71547,-0.71547c0.09136,-0.35044 -0.01388,-0.72289 -0.27512,-0.97371l-5.9707,-5.9707c1.41266,-1.72488 2.26367,-3.92576 2.26367,-6.32227c0,-5.511 -4.489,-10 -10,-10zM13,5c4.43012,0 8,3.56988 8,8c0,4.43012 -3.56988,8 -8,8c-4.43012,0 -8,-3.56988 -8,-8c0,-4.43012 3.56988,-8 8,-8z"></path></g></g></svg>
+                        </div>
+                    </div>
+                   
+
+                   
 
                     <div class="font-semibold text-base text-gray-900">
-                        <a href="index.html" class="px-6 mb-5 flex justify-between items-center gap-1"><span>HOME</span><span class="font-normal text-red-600 text-2xl">+</span></a>                  
-                        <div id="accordion">
-                            <a id="accordion-header" onclick="toggleAccordion(1)" class="px-6 mb-5 flex justify-between items-center gap-1 cursor-pointer"><span>WHO WE ARE</span><span class="font-normal text-red-600 text-2xl">+</span></a>
-                            <div class="absolute hidden z-10 bg-white py-1 px-6 w-full" id="panel">
-                                <a href="" class="block mb-1">Our History</a>
+                        <a href="index.html" class="px-6 pb-3 flex justify-between items-center gap-1  border-b border-b-red-600"><span>HOME</span><span class="font-normal text-red-600 text-2xl">+</span></a>                  
+                        <div id="accordion" class="border-b border-b-red-600 py-3">
+                            <a id="accordion-header" onclick="toggleAccordion(1)" class="px-6 flex justify-between items-center gap-1 cursor-pointer"><span>WHO WE ARE</span><span class="font-normal text-red-600 text-2xl">+</span></a>
+                            <div class="hidden bg-white py-1 px-6 w-full" id="panel">
+                                <a class="block mb-1">Our History</a>
                                 <a class="block mb-1">Mission and Vision</a>
                                 <a class="block mb-1">Our Beliefs</a>
                                 <a class="block mb-1">Our Structure</a>
@@ -47,9 +56,9 @@
                             </div>
                         </div>     
                        
-                        <div id="accordion"> 
-                            <a id="accordion-header" onclick="toggleAccordion(2)"  class="px-6 mb-5 flex justify-between items-center gap-1 cursor-pointer"><span>WHAT WE DO</span><span class="font-normal text-red-600 text-2xl">+</span></a>
-                            <div class="hidden absolute z-10  bg-white py-1 px-6 w-full" id="panel">
+                        <div id="accordion" class="border-b border-b-red-600 py-3"> 
+                            <a id="accordion-header" onclick="toggleAccordion(2)"  class="px-6 flex justify-between items-center gap-1 cursor-pointer"><span>WHAT WE DO</span><span class="font-normal text-red-600 text-2xl">+</span></a>
+                            <div class="hidden  bg-white pt-2 pb-1 px-6 w-full " id="panel">
                                 <a href="https://zionassemblychurchofgod.com/sunday-school/" class="block mb-1">Sunday School</a>
                                 <a class="block mb-1">Bible college</a>
                                 <a class="block mb-1">Zion Comprehensive College</a>
@@ -58,16 +67,17 @@
                                 <a class="block mb-1">Zion Musical Studio</a>
                             </div>
                         </div>
-                        <a href="blog.html" class="px-6 mb-5 flex justify-between items-center gap-1"><span>BLOG</span><span class="font-normal text-red-600 text-2xl">+</span></a>
-                        <a href="#" class="mb-5  flex items-center gap-1 px-6"><span>MEDIA RESOURCES</span></a>
-                        <a href="contact.html" class="px-6 ">CONTACT US</a>
+                       
+                        <a href="blog.html" class="px-6 py-3 flex justify-between items-center gap-1  border-b border-b-red-600"><span>BLOG</span><span class="font-normal text-red-600 text-2xl">+</span></a>
+                        <a href="events.html" class="py-3 flex justify-between items-center gap-1 px-6 border-b border-b-red-600"><span>EVENTS</span><span class="font-normal text-red-600 text-2xl">+</span></a>
+                        <a href="contact.html" class="px-6  py-3 flex justify-between items-center"><span>CONTACT US</span><span class="font-normal text-red-600 text-2xl">+</span></a>
                         <!-- <a href="#" class="">ONLINE GIVING</a> -->
                     </div>
 
-                    <div class="relative flex h-10 w-11/12 mr-auto ml-auto outline outline-[1px] outline-gray-400 mt-10 rounded-lg class=overflow-hidden flex-shrink-0 flex-nowrap">
+                    <!-- <div class="relative flex h-10 w-11/12 mr-auto ml-auto outline outline-[1px] outline-gray-400 mt-10 rounded-lg class=overflow-hidden flex-shrink-0 flex-nowrap">
                         <input type="text" class="relative w-11/12 px-5 rounded-md text-lg text-gray-400 py-3 outline-none" placeholder="Search for.." >
                         <svg class="w-10 h-full bg-red-600 absolute right-0 bottom-0 px-2 rounded-r-lg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="30px" height="30px" fill-rule="nonzero"><g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M13,3c-5.511,0 -10,4.489 -10,10c0,5.511 4.489,10 10,10c2.39651,0 4.59738,-0.85101 6.32227,-2.26367l5.9707,5.9707c0.25082,0.26124 0.62327,0.36648 0.97371,0.27512c0.35044,-0.09136 0.62411,-0.36503 0.71547,-0.71547c0.09136,-0.35044 -0.01388,-0.72289 -0.27512,-0.97371l-5.9707,-5.9707c1.41266,-1.72488 2.26367,-3.92576 2.26367,-6.32227c0,-5.511 -4.489,-10 -10,-10zM13,5c4.43012,0 8,3.56988 8,8c0,4.43012 -3.56988,8 -8,8c-4.43012,0 -8,-3.56988 -8,-8c0,-4.43012 3.56988,-8 8,-8z"></path></g></g></svg>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div>
@@ -103,9 +113,9 @@
                     </div>
         
                     <a href="blog.html" class="mr-5 px-1 hover:border-b border-b-red-600 flex items-center gap-1"><span>BLOG</span></a>
-                    <a href="#" class="mr-5 px-1 hover:border-b border-b-red-600 flex items-center gap-1"><span>MEDIA RESOURCES</span></a>
+                    <a href="events.html" class="mr-5 px-1 hover:border-b border-b-red-600 flex items-center gap-1"><span>EVENTS</span></a>
                     <a href="contact.html" class="mr-5 px-1 hover:border-b border-b-red-600">CONTACT US</a>
-                    <a href="#" class="bg-red-600 py-2 px-4 rounded-lg text-white" onclick="myAlert()">ONLINE GIVING</a>
+                    <a class="bg-red-600 py-2 px-4 rounded-lg text-white cursor-pointer" onclick="myAlert()">ONLINE GIVING</a>
                 </div>
 
                 <div class="lg:hidden">

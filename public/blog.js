@@ -34,7 +34,7 @@
 // });
 
 function myfunction() {
-    var x=
+    let x=
     document.getElementById("hidden");
     if (x.style.display === "none") {
         x.style.display= "block";
@@ -44,7 +44,7 @@ function myfunction() {
 }   
 
 function myfunction1() {
-    var x=
+    let x=
     document.getElementById("hidden1");
     if (x.style.display === "none") {
         x.style.display= "block";
@@ -54,7 +54,7 @@ function myfunction1() {
 }   
 
 function myfunction2() {
-    var x=
+    let x=
     document.getElementById("hidden2");
     if (x.style.display === "none") {
         x.style.display= "block";
@@ -64,7 +64,7 @@ function myfunction2() {
 }   
 
 function myfunction3() {
-    var x=
+    let x=
     document.getElementById("hidden3");
     if (x.style.display === "none") {
         x.style.display= "block";
@@ -74,7 +74,7 @@ function myfunction3() {
 }   
 
 function myfunction4() {
-    var x=
+    let x=
     document.getElementById("hidden4");
     if (x.style.display === "none") {
         x.style.display= "block";
@@ -84,7 +84,7 @@ function myfunction4() {
 }   
 
 function myfunction5() {
-    var x=
+    let x=
     document.getElementById("hidden5");
     if (x.style.display === "none") {
         x.style.display= "block";
@@ -94,7 +94,7 @@ function myfunction5() {
 }   
 
 function close() {
-    var x=
+    let x=
     document.getElementById("hidden1");
     if (x.style.display === "none") {
         x.style.display= "block";

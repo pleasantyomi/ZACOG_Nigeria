@@ -3,7 +3,7 @@ function myAlert(){
 }
 
 function hamburger() {
-    var x=
+    let x=
     document.getElementById("hamburger-contents");
     if (x.style.display === "none") {
         x.style.display= "block";
@@ -13,7 +13,7 @@ function hamburger() {
 }   
 
 function hamburgerClose() {
-    var x=
+    let x=
     document.getElementById("hamburger-contents");
     if (x.style.display === "none") {
         x.style.display= "block";
