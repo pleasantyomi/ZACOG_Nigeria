@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="dropdown.js"></script>
     <script src="accordion.js"></script>
+    <script src="server.js"></script>
 </head>
 <body>
     <header class="bg-bg1 bg-gray-900 bg-opacity-90 bg-blend-darken  h-[50vh] w-full bg-cover bg-no-repeat bg-center overflow-hidden">
@@ -47,10 +48,8 @@
                         <div id="accordion" class="border-b border-b-red-600 py-3">
                             <a id="accordion-header" onclick="toggleAccordion(1)" class="px-6 flex justify-between items-center gap-1 cursor-pointer"><span>WHO WE ARE</span><span class="font-normal text-red-600 text-2xl">+</span></a>
                             <div class="hidden bg-white py-1 px-6 w-full" id="panel">
-                                <a href="" class="block mb-1">Our History</a>
-                                <a class="block mb-1">Mission and Vision</a>
-                                <a class="block mb-1">Our Beliefs</a>
-                                <a class="block mb-1">Our Structure</a>
+                                <a href="about.html" class="block mb-1">About us</a>
+                                <a href="https://4903b2.p3cdn1.secureserver.net/wp-content/uploads/2022/03/Abstract-of-Faith-English-Feb-2022.pdf" class="block mb-1">Abstract of faith</a>
                                 <a href="staffs.html" class="block mb-1">staff</a>
                             </div>
                         </div>     
@@ -91,10 +90,8 @@
                     <div id="dropdown">
                         <a href="about.html" class="mr-5 px-1 hover:border-b overflow-hidden border-b-red-600 flex items-center gap-1" onmouseover="toggleDropdown(1)"><span>WHO WE ARE</span></a>
                         <div class="absolute z-10 hidden bg-white py-5 px-3 w-2/12 font-normal text-sm text-gray-900 top-34 ml-0 hover:block" id="dropdown-menu">
-                            <a href="about.html#History" class="block mb-1 hover:bg-red-600 py-2 px-2 rounded-sm">Our History</a>
-                            <a href="about.html#missions" class="block mb-1 hover:bg-red-600 py-2 px-2 rounded-sm">Mission and Vision</a>
-                            <a href="about.html#beliefs" class="block mb-1 hover:bg-red-600 py-2 px-2 rounded-sm">Our Beliefs</a>
-                            <a href="about.html#structure" class="block mb-1 hover:bg-red-600 py-2 px-2 rounded-sm">Our Structure</a>
+                            <a href="about.html" class="block mb-1 hover:bg-red-600 py-2 px-2 rounded-sm">About us</a>
+                            <a href="https://4903b2.p3cdn1.secureserver.net/wp-content/uploads/2022/03/Abstract-of-Faith-English-Feb-2022.pdf" class="block mb-1 hover:bg-red-600 py-2 px-2 rounded-sm">Abstract of faith</a>
                             <a href="staffs.html" class="block mb-1 hover:bg-red-600 py-2 px-2 rounded-sm">Staff</a>
                         </div> 
                     </div>           
@@ -140,7 +137,7 @@
                         <p class="text-white grid font-bold text-md leading-none"><span>ZION ASSEMBLY</span> <span>CHURCH OF GOD, NIGERIA.</span> </p>  
                     </div>
     
-                    <p class="font-thin text-sm text-white mt-1 w-10/12 leading-none">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque est consequuntur minima itaque.</p>    
+                    <!-- <p class="font-thin text-sm text-white mt-1 w-10/12 leading-none">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque est consequuntur minima itaque.</p>     -->
                 </div>
             </div>
 
@@ -148,7 +145,7 @@
                 <h1 class="font-normal text-xl ">GET IN <span class="font-semibold">TOUCH</span></h1>
                 <p class="text-lg">24/7 We will answer your questions and problems.</p>
 
-                <form class="mt-5">
+                <form id="emailForm" class="mt-5">
                     <div class="flex justify-between gap-4">
                         <div class="flex items-center outline outline-[1px] outline-gray-400 w-6/12 p-2 rounded-md hover:ring focus:ring-green-200 transition ease-in-out duration-400">
                             <div>
@@ -158,7 +155,7 @@
                             </div>
     
                             <div class="w-full relative">
-                                <input type="text" placeholder="First name" class="outline-none pl-1 py-2 w-full">
+                                <input type="text" placeholder="First name" class="outline-none border-0 pl-1 py-2 w-full">
                             </div>
                         </div>
 
@@ -170,7 +167,7 @@
                             </div>
     
                             <div class="w-full relative">
-                                <input type="text" placeholder="Last name" class="outline-none pl-1 py-2 w-full">
+                                <input type="text" placeholder="Last name" class="outline-none border-0 pl-1 py-2 w-full">
                             </div>
                         </div>
                     </div>
@@ -185,7 +182,7 @@
 
                         <div class="w-full relative rounded-md">
 
-                            <input type="email" placeholder="Email" class="outline-none py-2 font-lg w-full pl-2  bg-transparent">
+                            <input type="email" placeholder="Email" name="email" required class="outline-none border-0 py-2 font-lg w-full pl-2  bg-transparent">
 
                         </div>
                     </div>
@@ -199,19 +196,48 @@
 
                         <div class="w-full relative">
 
-                            <input type="tel" placeholder="Phone" class="outline-none py-2 font-lg min-w-full pl-2 bg-transparent">
+                            <input type="tel" placeholder="Phone" name="contact" required class="outline-none border-0 py-2 font-lg min-w-full pl-2 bg-transparent">
 
                         </div>
                     </div>
 
                     <div class="mt-5  ">
-                        <textarea  type="text" placeholder="Message" class=" pt-2 align w-full h-40 outline outline-[1px] outline-gray-500 px-2  rounded-md hover:ring focus:ring-green-200 transition ease-in-out duration-400"></textarea>
+                        <textarea  type="text" placeholder="Message" name="message" class=" pt-2 align w-full h-40 outline outline-[1px] outline-gray-500 px-2  rounded-md hover:ring focus:ring-green-200 transition ease-in-out duration-400"></textarea>
 
                     </div>
 
-                    <a href="#" class="block bg-gray-900 w-full py-3 text-white text-center text-lg font-semibold mt-5 rounded-md">Send Message</a>
+                    <button type="submit" class="block bg-gray-900 w-full py-3 text-white text-center text-lg font-semibold mt-5 rounded-md">Send Message</button>
                     
                 </form>
+
+                <script>
+                    document.getElementById('emailForm').addEventListener('submit', function (event) {
+                      event.preventDefault();
+                      const formData = new FormData(event.target);
+                
+                      // Convert form data to JSON
+                      const jsonData = {};
+                      formData.forEach((value, key) => {
+                        jsonData[key] = value;
+                      });
+                
+                      // Send the JSON data to the server for email processing
+                      fetch('/sendEmail', {
+                        method: 'POST',
+                        headers: {
+                          'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(jsonData),
+                      })
+                        .then((response) => response.json())
+                        .then((data) => {
+                          alert(data.message); // Show response message from the server
+                        })
+                        .catch((error) => {
+                          console.error('Error:', error);
+                        });
+                    });
+                  </script>
 
             </div>
         </div>
